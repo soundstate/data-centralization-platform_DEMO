@@ -1,0 +1,6 @@
+# Power Apps Canvas App source files
+JS-dashboard-sources/**/*.fx.yaml
+JS-dashboard-sources/**/*.pa.yaml
+*.fx.yaml
+*.pa.yaml
+*.md

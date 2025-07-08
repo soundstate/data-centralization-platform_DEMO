@@ -1,0 +1,81 @@
+{
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#72a880",
+    "activityBar.background": "#72a880",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#edebf3",
+    "activityBarBadge.foreground": "#15202b",
+    "commandCenter.border": "#e7e7e799",
+    "sash.hoverBorder": "#72a880",
+    "statusBar.background": "#588f66",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#72a880",
+    "statusBarItem.remoteBackground": "#588f66",
+    "statusBarItem.remoteForeground": "#e7e7e7",
+    "titleBar.activeBackground": "#588f66",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#588f6699",
+    "titleBar.inactiveForeground": "#e7e7e799"
+  },
+  "peacock.color": "#588F66",
+
+  // File icon theme settings
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.productIconTheme": "Default",
+
+  "files.associations": {
+    ".env*": "dotenv",
+    "*.env.*": "dotenv"
+  },
+
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**app/functions/create_cloud_project/": true
+  },
+
+  // File explorer settings
+  "explorer.sortOrder": "type",
+
+  // Workspace-specific PowerShell terminal with local profile script
+  "terminal.integrated.profiles.windows": {
+    "PowerShell (Workspace)": {
+      "source": "PowerShell",
+      "args": [
+        "-NoExit",
+        "-Command",
+        ". \"${workspaceFolder}\\.vscode\\profile.ps1\""
+      ]
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "python-envs.pythonProjects": [],
+
+  // Python-specific settings for jobe_shared package
+  "python.defaultInterpreterPath": "./.venv/Scripts/python.exe",
+  "azureFunctions.pythonVenv": ".venv",
+  "python.terminal.activateEnvironment": true,
+  "python.analysis.extraPaths": ["./packages/jobe_shared"],
+  "python.analysis.autoSearchPaths": true,
+  "python.analysis.autoImportCompletions": true,
+
+  // Pylance (Python language server) settings
+  "pylance.insiderChannel": "off",
+  "python.languageServer": "Pylance",
+
+  // Error lens specific settings
+  "errorLens.enabledDiagnosticLevels": ["error", "warning", "info"],
+
+  // Force refresh on import changes
+  "python.analysis.stubPath": "./packages",
+
+  // Workspace-specific Python settings
+  "python.analysis.include": [
+    "packages/jobe_shared/**/*.py",
+    "functions/**/*.py"
+  ]
+}
