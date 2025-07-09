@@ -1,0 +1,192 @@
+# Data Centralization Platform - Requirements
+# Core Python version: 3.11+
+
+# ================================
+# Core Web Framework & API
+# ================================
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+starlette==0.27.0
+pydantic==2.5.0
+pydantic-settings==2.1.0
+
+# ================================
+# Database & Storage
+# ================================
+# PostgreSQL with SQLAlchemy
+psycopg2-binary==2.9.9
+sqlalchemy==2.0.23
+sqlmodel==0.0.14
+alembic==1.13.1
+
+# Vector database support
+pgvector==0.2.4
+
+# Redis for caching and queues
+redis==5.0.1
+hiredis==2.2.3
+
+# ================================
+# HTTP Clients & API Integration
+# ================================
+httpx==0.25.2
+requests==2.31.0
+aiohttp==3.9.1
+tenacity==8.2.3  # Retry logic
+
+# GraphQL client
+gql==3.4.1
+graphql-core==3.2.3
+
+# ================================
+# Data Processing & Analysis
+# ================================
+# Data manipulation
+pandas==2.1.4
+polars==0.20.3
+numpy==1.24.4
+scipy==1.11.4
+
+# Statistical analysis
+statsmodels==0.14.1
+scikit-learn==1.3.2
+
+# ================================
+# LLM & AI Integration
+# ================================
+# LangChain ecosystem
+langchain==0.1.0
+langchain-openai==0.0.5
+langchain-community==0.0.12
+langchain-core==0.1.10
+
+# OpenAI API
+openai==1.6.1
+
+# Local embeddings
+sentence-transformers==2.2.2
+transformers==4.36.2
+torch==2.1.2
+
+# Vector store integration
+chromadb==0.4.18
+
+# ================================
+# Workflow Orchestration
+# ================================
+prefect==2.14.21
+prefect-sqlalchemy==0.2.4
+
+# Task queues
+celery==5.3.4
+dramatiq==1.14.2
+
+# ================================
+# Data Visualization
+# ================================
+# Interactive plotting
+plotly==5.17.0
+dash==2.16.1
+
+# Statistical plotting
+seaborn==0.13.0
+matplotlib==3.8.2
+
+# Geographic visualization
+folium==0.15.1
+geopandas==0.14.2
+
+# ================================
+# API Integrations
+# ================================
+# Spotify API
+spotipy==2.23.0
+
+# Notion API
+notion-client==2.2.1
+
+# GitHub API
+PyGithub==2.1.1
+
+# TMDB API
+tmdbsimple==2.9.1
+
+# Weather API
+pyowm==3.3.0
+
+# ================================
+# Development & Testing
+# ================================
+# Testing framework
+pytest==7.4.3
+pytest-asyncio==0.21.1
+pytest-cov==4.1.0
+pytest-mock==3.12.0
+
+# Code quality
+black==23.11.0
+flake8==6.1.0
+mypy==1.7.1
+isort==5.13.2
+
+# ================================
+# Configuration & Environment
+# ================================
+python-dotenv==1.0.0
+click==8.1.7
+typer==0.9.0
+
+# ================================
+# Logging & Monitoring
+# ================================
+loguru==0.7.2
+rich==13.7.0
+
+# ================================
+# Date/Time & Utilities
+# ================================
+python-dateutil==2.8.2
+pytz==2023.3
+more-itertools==10.1.0
+
+# ================================
+# Serialization & Validation
+# ================================
+orjson==3.9.10
+marshmallow==3.20.1
+
+# ================================
+# GraphQL Server
+# ================================
+strawberry-graphql==0.215.1
+
+# ================================
+# Development Tools
+# ================================
+notebook==7.0.6
+jupyter==1.0.0
+ipykernel==6.27.1
+
+# ================================
+# Optional: Neo4j (if using graph database)
+# ================================
+# neo4j==5.15.0
+
+# ================================
+# Optional: Docker SDK (if needed)
+# ================================
+# docker==6.1.3
+
+# ================================
+# Optional: Cloud providers
+# ================================
+# azure-storage-blob==12.19.0
+# boto3==1.34.0  # AWS SDK
+
+# ================================
+# Pinned for compatibility
+# ================================
+certifi==2023.11.17
+charset-normalizer==3.3.2
+idna==3.6
+urllib3==2.1.0

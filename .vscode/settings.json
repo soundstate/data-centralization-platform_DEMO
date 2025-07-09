@@ -55,11 +55,16 @@
   "terminal.integrated.defaultProfile.windows": "PowerShell",
   "python-envs.pythonProjects": [],
 
-  // Python-specific settings for jobe_shared package
+  // Python-specific settings for data centralization platform
   "python.defaultInterpreterPath": "./.venv/Scripts/python.exe",
   "azureFunctions.pythonVenv": ".venv",
   "python.terminal.activateEnvironment": true,
-  "python.analysis.extraPaths": ["./packages/jobe_shared"],
+  "python.analysis.extraPaths": [
+    "./packages/shared_core",
+    "./packages/workflows",
+    "./services",
+    "./flows"
+  ],
   "python.analysis.autoSearchPaths": true,
   "python.analysis.autoImportCompletions": true,
 
@@ -75,7 +80,33 @@
 
   // Workspace-specific Python settings
   "python.analysis.include": [
-    "packages/jobe_shared/**/*.py",
+    "packages/shared_core/**/*.py",
+    "packages/workflows/**/*.py",
+    "services/**/*.py",
+    "flows/**/*.py",
     "functions/**/*.py"
-  ]
+  ],
+
+  // Testing configuration
+  "python.testing.pytestEnabled": true,
+  "python.testing.pytestArgs": [
+    "development/testing"
+  ],
+  "python.testing.unittestEnabled": false,
+
+  // Formatting settings
+  "python.formatting.provider": "black",
+  "python.formatting.blackArgs": ["--line-length=88"],
+  "python.linting.enabled": true,
+  "python.linting.flake8Enabled": true,
+  "python.linting.mypyEnabled": true,
+  "python.sortImports.args": ["--profile", "black"],
+
+  // Auto-format on save
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  }
 }
