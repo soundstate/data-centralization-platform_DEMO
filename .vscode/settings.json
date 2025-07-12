@@ -73,7 +73,7 @@
   "python.languageServer": "Pylance",
 
   // Error lens specific settings
-  "errorLens.enabledDiagnosticLevels": ["error", "warning", "info"],
+  "errorLens.enabledDiagnosticLevels": ["error", "warning"],
 
   // Force refresh on import changes
   "python.analysis.stubPath": "./packages",
@@ -89,24 +89,24 @@
 
   // Testing configuration
   "python.testing.pytestEnabled": true,
-  "python.testing.pytestArgs": [
-    "development/testing"
-  ],
+  "python.testing.pytestArgs": ["development/testing"],
   "python.testing.unittestEnabled": false,
 
-  // Formatting settings
-  "python.formatting.provider": "black",
-  "python.formatting.blackArgs": ["--line-length=88"],
-  "python.linting.enabled": true,
-  "python.linting.flake8Enabled": true,
-  "python.linting.mypyEnabled": true,
-  "python.sortImports.args": ["--profile", "black"],
-
-  // Auto-format on save
+  // Formatting settings (updated for newer extensions)
   "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
       "source.organizeImports": "explicit"
     }
-  }
+  },
+  
+  // Black formatter settings
+  "black-formatter.args": ["--line-length=88"],
+  
+  // Flake8 settings
+  "flake8.args": ["--ignore=W293"],
+  
+  // Import sorting settings
+  "isort.args": ["--profile", "black"]
 }
