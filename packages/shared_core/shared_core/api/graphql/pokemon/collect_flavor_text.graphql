@@ -1,0 +1,16 @@
+query collectFlavorText($limit: Int!) {
+  pokemon(limit: $limit) {
+    name
+    pokemonspecy {
+      pokemonspeciesflavortexts {
+        flavor_text
+        language {
+          language_name: name
+        }
+        version {
+          name
+        }
+      }
+    }
+  }
+}

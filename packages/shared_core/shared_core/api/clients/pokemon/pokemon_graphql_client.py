@@ -8,10 +8,9 @@ Comprehensive client for Pokemon GraphQL API with:
 - Evolution chains for progression analysis
 """
 
+from config.base_client import APIResponse, BaseAPIClient
 from gql import Client, gql
 from gql.transport.httpx import HTTPXAsyncTransport
-
-from ..base_client import APIResponse, BaseAPIClient
 
 
 class PokemonGraphQLClient(BaseAPIClient):
@@ -93,7 +92,8 @@ class PokemonGraphQLClient(BaseAPIClient):
                     }
                 }
             }
-        """)
+        """
+        )
 
         variables = {"limit": limit, "offset": offset}
 
@@ -262,8 +262,10 @@ class PokemonGraphQLClient(BaseAPIClient):
             return APIResponse(
                 success=False, status_code=500, response_time_ms=0, errors=[str(e)]
             )
-    
-    async def get_pokemon_species_by_generation(self, generation_name: str = "generation-iii", limit: int = 100) -> APIResponse:
+
+    async def get_pokemon_species_by_generation(
+        self, generation_name: str = "generation-iii", limit: int = 100
+    ) -> APIResponse:
         """
         Get Pokemon species by generation (based on working Postman query)
         """
@@ -290,19 +292,30 @@ class PokemonGraphQLClient(BaseAPIClient):
                     }
                 }
             }
-        """)
-        
+        """
+        )
+
         variables = {"generationName": generation_name, "limit": limit}
-        
+
         try:
             result = await self.gql_client.execute_async(query, variables)
             return APIResponse(
-                data=result, success=True, status_code=200, response_time_ms=0,
+                data=result,
+                success=True,
+                status_code=200,
+                response_time_ms=0,
                 metadata={
                     "generation": generation_name,
                     "returned_count": len(result.get("gen_species", [])),
-                    "total_in_generation": result.get("generation_info", [{}])[0].get("pokemon_species", {}).get("aggregate", {}).get("count", 0) if result.get("generation_info") else 0
-                }
+                    "total_in_generation": (
+                        result.get("generation_info", [{}])[0]
+                        .get("pokemon_species", {})
+                        .get("aggregate", {})
+                        .get("count", 0)
+                        if result.get("generation_info")
+                        else 0
+                    ),
+                },
             )
         except Exception as e:
             return APIResponse(

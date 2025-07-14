@@ -1,0 +1,107 @@
+query GetEnhancedPokemonData($limit: Int!) {
+  pokemon(limit: $limit) {
+    # Core Identity
+    pokemon_id: id
+    pokemon_name: name
+    pokemon_height: height
+    pokemon_weight: weight
+    pokemon_species_id: pokemon_species_id
+    base_experience
+
+    # Types & Matchups
+    pokemontypes {
+      slot
+      type {
+        type_id: id
+        type_name: name
+        # Type effectiveness relationships
+        typeefficacies {
+          damage_factor
+          target_type_id
+          TypeByTargetTypeId {
+            type_name: name
+          }
+        }
+      }
+    }
+
+    # Stats for Competitive Analysis
+    pokemonstats {
+      base_stat
+      effort
+      stat {
+        stat_id: id
+        stat_name: name
+      }
+    }
+
+    # Abilities & Hidden Abilities
+    pokemonabilities {
+      is_hidden
+      slot
+      ability {
+        ability_id: id
+        ability_name: name
+      }
+    }
+
+    # Move Learning Relationships
+    pokemonmoves_aggregate(limit: 50) {
+      nodes {
+        level
+        movelearnmethod {
+          method_name: name
+        }
+        move {
+          move_id: id
+          move_name: name
+          power
+          accuracy
+          pp
+          type {
+            type_name: name
+          }
+        }
+      }
+    }
+
+    # Species-Level Data
+    species_data: pokemonspecy {
+      species_name: name
+      generation {
+        generation_id: id
+        generation_name: name
+      }
+
+      # Evolution Chain
+      evolutionchain {
+        chain_id: id
+        pokemonspecies {
+          species_name: name
+          evolves_from_species_id
+          # Evolution requirements could be added here
+        }
+      }
+
+      # Capture & Gender Data
+      capture_rate
+      gender_rate
+      hatch_counter
+      is_legendary
+      is_mythical
+
+      # Color for visual grouping
+      pokemon_color_id
+
+      # Shape for physical characteristics
+      pokemon_shape_id
+    }
+
+    # Forms & Varieties
+    pokemonforms {
+      form_name: name
+      is_default
+      is_battle_only
+    }
+  }
+}

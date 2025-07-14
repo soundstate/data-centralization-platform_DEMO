@@ -1,0 +1,8 @@
+query collectEvolutionChains($limit: Int!) {
+  evolutionchain(limit: $limit) {
+    pokemonspecies {
+      species_name: name
+      evolves_from_species_id
+    }
+  }
+}
