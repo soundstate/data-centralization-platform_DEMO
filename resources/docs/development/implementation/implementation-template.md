@@ -8,8 +8,6 @@
 
 **Implementation Lead**: [Primary developer responsible]
 
-**Team Members**: [List all team members and their roles]
-
 **Start Date**: [Planned start date]
 
 **Target Completion**: [Planned completion date]

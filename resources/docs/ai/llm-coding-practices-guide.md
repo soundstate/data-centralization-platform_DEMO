@@ -99,7 +99,7 @@ logger.debug("Starting item processing loop")
 
 ## Import and Package Management
 
-### âœ… ALWAYS Use Package-Based Imports
+### ALWAYS Use Package-Based Imports
 
 ```python
 # CORRECT - Package-based imports
@@ -110,7 +110,7 @@ from shared_core.utils.logging_config import CentralizedLogger
 from services.data_processing import DataProcessor
 ```
 
-### âŒ NEVER Use Path Manipulation
+### NEVER Use Path Manipulation
 
 ```python
 # INCORRECT - Do not suggest these patterns
@@ -124,7 +124,7 @@ os.path.join("..", "..", "packages")
 
 ## Configuration and Environment Management
 
-### âœ… Environment-Driven Configuration (Required)
+### Environment-Driven Configuration (Required)
 
 ```python
 # CORRECT - Use config classes for all IDs and secrets
