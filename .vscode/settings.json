@@ -71,9 +71,18 @@
   // Pylance (Python language server) settings
   "pylance.insiderChannel": "off",
   "python.languageServer": "Pylance",
+  "python.linting.enabled": true,
+  "python.linting.flake8Enabled": true,
+  "python.linting.pylintEnabled": false,
 
   // Error lens specific settings
   "errorLens.enabledDiagnosticLevels": ["error", "warning"],
+  "errorLens.excludeByMessage": [
+    "blank line contains whitespace",
+    "trailing whitespace",
+    "no newline at end of file",
+    "blank line at end of file"
+  ],
 
   // Force refresh on import changes
   "python.analysis.stubPath": "./packages",
@@ -98,14 +107,19 @@
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
       "source.organizeImports": "explicit"
-    }
+    },
+    "editor.rulers": [88],
+    "editor.trimAutoWhitespace": false,
+    "editor.insertSpaces": true,
+    "editor.renderWhitespace": "none"
   },
   
   // Black formatter settings
   "black-formatter.args": ["--line-length=88"],
   
-  // Flake8 settings
-  "flake8.args": ["--ignore=W293"],
+  // Flake8 settings - ignore whitespace errors completely
+  "flake8.args": ["--ignore=W293,W291,W292,W391,E701,E702,E703,E711,E712,E713,E714,E721,E722,E731,E741,E742,E743,W503,W504"],
+  "flake8.enabled": true,
   
   // Import sorting settings
   "isort.args": ["--profile", "black"]

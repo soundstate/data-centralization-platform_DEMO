@@ -1,0 +1,20 @@
+# MusicBrainz Data Collection Service Requirements
+
+# Core dependencies
+httpx>=0.24.0               # Async HTTP client
+asyncio-throttle>=1.0.0     # Rate limiting
+tenacity>=8.0.0             # Retry logic
+pydantic>=2.0.0             # Data validation
+python-dotenv>=1.0.0        # Environment variable loading
+
+# Additional dependencies
+# Note: The shared_core package provides:
+# - Centralized logging
+# - Configuration management
+# - Base API client
+# - MusicBrainz-specific client
+
+# Development dependencies (optional)
+# pytest>=7.0.0
+# pytest-asyncio>=0.21.0
+# pytest-mock>=3.10.0

@@ -1,0 +1,29 @@
+# Spotify Data Collection Service Requirements
+# These are the specific dependencies for the Spotify collector service
+
+# HTTP client and async support
+httpx>=0.25.0
+asyncio-throttle>=1.0.0
+
+# Retry logic
+tenacity>=8.0.0
+
+# Data validation
+pydantic>=2.0.0
+
+# Environment management
+python-dotenv>=1.0.0
+
+# JSON handling (built-in)
+# datetime (built-in)
+# pathlib (built-in)
+# typing (built-in)
+# urllib (built-in)
+# base64 (built-in)
+# secrets (built-in)
+
+# Note: The shared_core package provides:
+# - Centralized logging
+# - Configuration management
+# - Base API client
+# - Spotify-specific client

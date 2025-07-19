@@ -1,0 +1,185 @@
+"""
+MusicBrainz Configuration Module
+
+This module provides centralized configuration management for MusicBrainz API integration.
+It follows the established patterns for environment-driven configuration in the shared_core package.
+
+The configuration includes:
+- User-Agent management
+- Rate limiting configuration
+- Debug mode settings
+
+All configuration values are loaded from environment variables with sensible defaults.
+"""
+
+import os
+import logging
+from typing import Dict, Any
+
+from shared_core.logging.centralized_logger import CentralizedLogger
+
+
+class MusicBrainzConfig:
+    """
+    Centralized configuration for MusicBrainz API integration.
+    
+    This configuration class manages all MusicBrainz-related settings using environment variables.
+    It provides validation, logging, and easy access to configuration values.
+    
+    Environment Variables:
+    - MUSICBRAINZ_USER_AGENT: Custom User-Agent (required)
+    - MUSICBRAINZ_RATE_LIMIT_PER_SECOND: Rate limit in requests per second (default: 1.0)
+    - MUSICBRAINZ_DEBUG_MODE: Enable debug logging (default: false)
+    
+    Usage:
+        # Get User-Agent
+        user_agent = MusicBrainzConfig.user_agent()
+        
+        # Get full configuration
+        config = MusicBrainzConfig.get_config_summary()
+    """
+    
+    _instance = None
+    _logger = None
+    
+    def __new__(cls):
+        """Singleton pattern to ensure single configuration instance."""
+        if cls._instance is None:
+            cls._instance = super().__new__(cls)
+            cls._logger = CentralizedLogger.get_logger(__name__)
+            cls._logger.info("MusicBrainz configuration initialized")
+        return cls._instance
+    
+    @classmethod
+    def user_agent(cls) -> str:
+        """
+        Get MusicBrainz User-Agent from environment.
+        
+        Returns:
+            Custom User-Agent
+            
+        Raises:
+            ValueError: If User-Agent is not found in environment
+        """
+        user_agent = os.getenv("MUSICBRAINZ_USER_AGENT", "").strip()
+        if not user_agent:
+            error_msg = "MUSICBRAINZ_USER_AGENT environment variable is required but not set"
+            if cls._logger:
+                cls._logger.error(error_msg)
+            raise ValueError(error_msg)
+        
+        if cls._logger:
+            cls._logger.debug("MusicBrainz User-Agent retrieved from environment")
+        
+        return user_agent
+    
+    @classmethod
+    def rate_limit_per_second(cls) -> float:
+        """
+        Get rate limiting configuration.
+        
+        Returns:
+            Rate limit in requests per second (default: 1.0)
+        """
+        try:
+            return float(os.getenv("MUSICBRAINZ_RATE_LIMIT_PER_SECOND", "1.0"))
+        except ValueError:
+            if cls._logger:
+                cls._logger.warning("Invalid MUSICBRAINZ_RATE_LIMIT_PER_SECOND value, using default: 1.0")
+            return 1.0
+    
+    @classmethod
+    def debug_mode(cls) -> bool:
+        """
+        Get debug mode setting.
+        
+        Returns:
+            True if debug mode is enabled, False otherwise
+        """
+        return os.getenv("MUSICBRAINZ_DEBUG_MODE", "false").lower() in ("true", "1", "yes", "on")
+    
+    @classmethod
+    def validate_credentials(cls) -> bool:
+        """
+        Validate MusicBrainz configuration.
+        
+        Returns:
+            True if configuration is valid, False otherwise
+        """
+        try:
+            # Check if User-Agent is available
+            user_agent = cls.user_agent()
+            
+            # Basic validation of User-Agent format
+            if not user_agent or len(user_agent) < 5:
+                if cls._logger:
+                    cls._logger.error("User-Agent appears to be invalid (too short)")
+                return False
+            
+            if cls._logger:
+                cls._logger.info("MusicBrainz configuration validation successful")
+            
+            return True
+            
+        except Exception as e:
+            if cls._logger:
+                cls._logger.error(f"MusicBrainz configuration validation failed: {str(e)}")
+            return False
+    
+    @classmethod
+    def get_config_summary(cls) -> Dict[str, Any]:
+        """
+        Get a summary of all MusicBrainz configuration values.
+        
+        Returns:
+            Dictionary containing all configuration values
+        """
+        try:
+            user_agent = cls.user_agent()
+        except ValueError:
+            user_agent = "NOT_SET"
+        
+        return {
+            "user_agent": user_agent,
+            "rate_limit_per_second": cls.rate_limit_per_second(),
+            "debug_mode": cls.debug_mode(),
+            "is_valid": cls.validate_credentials()
+        }
+    
+    @classmethod
+    def log_configuration(cls) -> None:
+        """
+        Log current configuration settings (for debugging).
+        """
+        if not cls._logger:
+            return
+        
+        config = cls.get_config_summary()
+        cls._logger.info("MusicBrainz Configuration Summary:")
+        for key, value in config.items():
+            cls._logger.info(f"  {key}: {value}")
+    
+    @classmethod
+    def get_client_config(cls) -> Dict[str, Any]:
+        """
+        Get configuration values formatted for MusicBrainzClient initialization.
+        
+        Returns:
+            Dictionary with client configuration parameters
+        """
+        return {
+            "user_agent": cls.user_agent(),
+            "rate_limit_per_second": cls.rate_limit_per_second(),
+            "debug_mode": cls.debug_mode()
+        }
+    
+    @classmethod
+    def get_default_params(cls) -> Dict[str, Any]:
+        """
+        Get default parameters for MusicBrainz API requests.
+        
+        Returns:
+            Dictionary with default request parameters
+        """
+        return {}  # No default parameters for MusicBrainz API
+        

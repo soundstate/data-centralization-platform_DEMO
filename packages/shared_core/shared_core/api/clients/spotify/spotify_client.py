@@ -14,8 +14,8 @@ import secrets
 import urllib.parse
 from typing import Dict, List, Optional, Any
 
-from .base_client import BaseAPIClient, APIResponse
-from ...config.logging_config import get_logger
+from shared_core.config.base_client import BaseAPIClient, APIResponse
+from shared_core.config.logging_config import get_logger
 
 
 class SpotifyClient(BaseAPIClient):
