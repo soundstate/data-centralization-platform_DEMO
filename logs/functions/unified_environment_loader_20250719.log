@@ -1,0 +1,4 @@
+2025-07-19 23:20:51,536 - unified_environment_loader - WARNING - <module>:32 - python-dotenv not available. Environment files will not be loaded in local development.
+2025-07-19 23:20:51,536 - unified_environment_loader - INFO - load_configuration:191 - Loading environment configuration for: development
+2025-07-19 23:20:51,536 - unified_environment_loader - INFO - load_configuration:222 - Environment loading complete: 0/3 files loaded
+2025-07-19 23:20:51,536 - unified_environment_loader - INFO - <module>:350 - Environment loader initialized for development environment
