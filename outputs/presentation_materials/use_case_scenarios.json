@@ -1,0 +1,124 @@
+{
+  "ecommerce_scenario": {
+    "company_profile": {
+      "name": "TechStyle Commerce",
+      "size": "Mid-market retailer",
+      "revenue": "$50M annually",
+      "challenge": "Fragmented data across 8+ systems affecting marketing ROI"
+    },
+    "demo_flow": {
+      "data_sources": [
+        "Shopify sales data",
+        "Google Analytics traffic",
+        "Facebook Ads campaigns",
+        "Customer service tickets",
+        "Weather API data",
+        "Inventory management"
+      ],
+      "key_discoveries": [
+        {
+          "insight": "Rainy day sales correlation",
+          "description": "Indoor product sales increase 34% during rainy weather",
+          "business_impact": "$180k additional revenue opportunity"
+        },
+        {
+          "insight": "Customer service prediction",
+          "description": "Support tickets predict negative reviews 48 hours in advance",
+          "business_impact": "Proactive intervention saves 15% of at-risk customers"
+        },
+        {
+          "insight": "Marketing attribution optimization",
+          "description": "Instagram ads perform 67% better for users aged 18-25",
+          "business_impact": "25% improvement in marketing ROI"
+        }
+      ]
+    },
+    "results": {
+      "implementation_time": "3 weeks",
+      "correlations_discovered": 47,
+      "revenue_impact": "$425k annually",
+      "cost_savings": "$85k in reduced analytics labor"
+    }
+  },
+  "manufacturing_scenario": {
+    "company_profile": {
+      "name": "Precision Parts Manufacturing",
+      "size": "500 employees, 3 facilities",
+      "revenue": "$120M annually",
+      "challenge": "Quality issues and unplanned downtime affecting profitability"
+    },
+    "demo_flow": {
+      "data_sources": [
+        "Production line sensors",
+        "Quality control measurements",
+        "Maintenance schedules",
+        "Supply chain deliveries",
+        "Environmental conditions",
+        "Worker scheduling"
+      ],
+      "key_discoveries": [
+        {
+          "insight": "Predictive maintenance patterns",
+          "description": "Vibration + temperature combo predicts failures 72 hours early",
+          "business_impact": "35% reduction in unplanned downtime"
+        },
+        {
+          "insight": "Quality correlation analysis",
+          "description": "Supplier batch timing correlates with defect rates",
+          "business_impact": "40% reduction in quality issues"
+        },
+        {
+          "insight": "Environmental impact on production",
+          "description": "Humidity levels affect precision measurements",
+          "business_impact": "12% improvement in first-pass quality"
+        }
+      ]
+    },
+    "results": {
+      "implementation_time": "5 weeks",
+      "correlations_discovered": 73,
+      "cost_savings": "$2.1M annually",
+      "efficiency_gains": "18% overall equipment effectiveness"
+    }
+  },
+  "financial_services_scenario": {
+    "company_profile": {
+      "name": "Regional Credit Union",
+      "size": "150k members, $2B assets",
+      "challenge": "Risk assessment limited by disconnected data systems"
+    },
+    "demo_flow": {
+      "data_sources": [
+        "Core banking system",
+        "Credit bureau data",
+        "Market data feeds",
+        "Regulatory filings",
+        "Customer interactions",
+        "Economic indicators"
+      ],
+      "key_discoveries": [
+        {
+          "insight": "Early default indicators",
+          "description": "Transaction pattern changes predict defaults 90 days early",
+          "business_impact": "45% reduction in loan losses"
+        },
+        {
+          "insight": "Cross-selling opportunities",
+          "description": "Life event triggers correlate with product needs",
+          "business_impact": "30% increase in product adoption"
+        },
+        {
+          "insight": "Market risk assessment",
+          "description": "Local economic indicators predict portfolio performance",
+          "business_impact": "Better risk-adjusted returns"
+        }
+      ]
+    },
+    "results": {
+      "implementation_time": "6 weeks",
+      "correlations_discovered": 89,
+      "risk_reduction": "$1.8M in avoided losses",
+      "revenue_increase": "$650k from improved products"
+    }
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "executive_demo_script": {
+    "duration": "15 minutes",
+    "audience": "C-level executives, VPs",
+    "objective": "Demonstrate business value and ROI",
+    "script": [
+      {
+        "time": "0-2 min",
+        "section": "Problem Setup",
+        "content": "Show current state - multiple dashboards, delayed insights, manual analysis",
+        "talking_points": [
+          "How many dashboards do your teams currently use?",
+          "How long does it take to get answers to business questions?",
+          "What insights might you be missing?"
+        ]
+      },
+      {
+        "time": "2-8 min",
+        "section": "Platform Demonstration",
+        "content": "Live dashboard walkthrough with real-time correlations",
+        "talking_points": [
+          "Single pane of glass for all your data",
+          "AI automatically finds hidden patterns",
+          "Ask questions in natural language"
+        ]
+      },
+      {
+        "time": "8-12 min",
+        "section": "Business Impact",
+        "content": "Show specific ROI calculations and success metrics",
+        "talking_points": [
+          "Companies see 400%+ ROI in first year",
+          "Decision speed increases by 10x",
+          "Discover 10x more insights than manual analysis"
+        ]
+      },
+      {
+        "time": "12-15 min",
+        "section": "Implementation & Next Steps",
+        "content": "Timeline, investment, and pilot program options",
+        "talking_points": [
+          "Pilot can be running in 2-3 weeks",
+          "Minimal IT resources required",
+          "Quick time-to-value with immediate insights"
+        ]
+      }
+    ]
+  },
+  "technical_demo_script": {
+    "duration": "25 minutes",
+    "audience": "CTOs, IT Directors, Data Teams",
+    "objective": "Demonstrate technical capabilities and architecture",
+    "script": [
+      {
+        "time": "0-3 min",
+        "section": "Architecture Overview",
+        "content": "System design, scalability, and integration points",
+        "talking_points": [
+          "Microservices architecture for flexibility",
+          "Cloud-native with on-premises options",
+          "Enterprise security and compliance"
+        ]
+      },
+      {
+        "time": "3-10 min",
+        "section": "Data Integration Demo",
+        "content": "Show multiple data source connections and processing",
+        "talking_points": [
+          "Connects to 100+ data source types",
+          "Real-time and batch processing",
+          "Automatic data quality validation"
+        ]
+      },
+      {
+        "time": "10-18 min",
+        "section": "AI/ML Capabilities",
+        "content": "Correlation discovery, statistical analysis, semantic search",
+        "talking_points": [
+          "Advanced statistical correlation algorithms",
+          "Natural language processing with GPT",
+          "Automated insight generation"
+        ]
+      },
+      {
+        "time": "18-23 min",
+        "section": "Development & Deployment",
+        "content": "Code walkthrough, testing, monitoring, scaling",
+        "talking_points": [
+          "Clean, well-documented codebase",
+          "Comprehensive testing framework",
+          "Built for enterprise scalability"
+        ]
+      },
+      {
+        "time": "23-25 min",
+        "section": "Integration Planning",
+        "content": "Implementation approach and timeline",
+        "talking_points": [
+          "Phased rollout minimizes risk",
+          "Works with existing infrastructure",
+          "Comprehensive support and training"
+        ]
+      }
+    ]
+  }
+}

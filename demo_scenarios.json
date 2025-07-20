@@ -1,0 +1,2369 @@
+{
+  "ecommerce": {
+    "title": "E-commerce Data Centralization Demo",
+    "business_problem": "Fragmented data across sales, marketing, and customer service platforms",
+    "roi_calculation": {
+      "time_to_insight_improvement": "From 2 weeks to 2 hours (95% reduction)",
+      "correlation_discovery": "23% weather-sales correlation identified",
+      "proactive_intervention": "48-hour early warning for customer issues",
+      "revenue_impact": "$2.3M annual increase from weather-based inventory optimization"
+    },
+    "data_sources": {
+      "sales_transactions": [
+        {
+          "date": "2024-07-19",
+          "category": "winter_clothing",
+          "daily_units_sold": 34,
+          "daily_revenue": 5668.706454292959,
+          "avg_order_value": 66.08847949047174,
+          "unique_customers": 29
+        },
+        {
+          "date": "2024-07-19",
+          "category": "summer_clothing",
+          "daily_units_sold": 332,
+          "daily_revenue": 33531.17529239709,
+          "avg_order_value": 64.87744982718277,
+          "unique_customers": 223
+        },
+        {
+          "date": "2024-07-19",
+          "category": "electronics",
+          "daily_units_sold": 153,
+          "daily_revenue": 7250.914241284631,
+          "avg_order_value": 60.771779292307784,
+          "unique_customers": 130
+        },
+        {
+          "date": "2024-07-19",
+          "category": "home_goods",
+          "daily_units_sold": 74,
+          "daily_revenue": 12234.341987989324,
+          "avg_order_value": 170.5196134250906,
+          "unique_customers": 65
+        },
+        {
+          "date": "2024-07-19",
+          "category": "outdoor_equipment",
+          "daily_units_sold": 57,
+          "daily_revenue": 6452.151883495202,
+          "avg_order_value": 152.50375478297457,
+          "unique_customers": 51
+        },
+        {
+          "date": "2024-07-20",
+          "category": "winter_clothing",
+          "daily_units_sold": 46,
+          "daily_revenue": 3638.2929979300225,
+          "avg_order_value": 65.48625162117088,
+          "unique_customers": 27
+        },
+        {
+          "date": "2024-07-20",
+          "category": "summer_clothing",
+          "daily_units_sold": 457,
+          "daily_revenue": 58373.59430293358,
+          "avg_order_value": 124.90219190183318,
+          "unique_customers": 282
+        },
+        {
+          "date": "2024-07-20",
+          "category": "electronics",
+          "daily_units_sold": 209,
+          "daily_revenue": 6918.459376459243,
+          "avg_order_value": 179.83414567506773,
+          "unique_customers": 172
+        },
+        {
+          "date": "2024-07-20",
+          "category": "home_goods",
+          "daily_units_sold": 92,
+          "daily_revenue": 16135.193957549602,
+          "avg_order_value": 100.3413203058189,
+          "unique_customers": 60
+        },
+        {
+          "date": "2024-07-20",
+          "category": "outdoor_equipment",
+          "daily_units_sold": 71,
+          "daily_revenue": 16789.14388180453,
+          "avg_order_value": 140.51532417421893,
+          "unique_customers": 55
+        },
+        {
+          "date": "2024-07-21",
+          "category": "winter_clothing",
+          "daily_units_sold": 45,
+          "daily_revenue": 1181.3620555871687,
+          "avg_order_value": 171.77232370962122,
+          "unique_customers": 31
+        },
+        {
+          "date": "2024-07-21",
+          "category": "summer_clothing",
+          "daily_units_sold": 295,
+          "daily_revenue": 34532.11428543584,
+          "avg_order_value": 63.05606772793695,
+          "unique_customers": 244
+        },
+        {
+          "date": "2024-07-21",
+          "category": "electronics",
+          "daily_units_sold": 322,
+          "daily_revenue": 51896.49910320004,
+          "avg_order_value": 159.48737011808691,
+          "unique_customers": 236
+        },
+        {
+          "date": "2024-07-21",
+          "category": "home_goods",
+          "daily_units_sold": 123,
+          "daily_revenue": 11836.130516776635,
+          "avg_order_value": 132.13340597637722,
+          "unique_customers": 99
+        },
+        {
+          "date": "2024-07-21",
+          "category": "outdoor_equipment",
+          "daily_units_sold": 70,
+          "daily_revenue": 14066.961580379048,
+          "avg_order_value": 67.72503255969357,
+          "unique_customers": 49
+        },
+        {
+          "date": "2024-07-22",
+          "category": "winter_clothing",
+          "daily_units_sold": 30,
+          "daily_revenue": 550.4752985156367,
+          "avg_order_value": 83.56872634864195,
+          "unique_customers": 25
+        },
+        {
+          "date": "2024-07-22",
+          "category": "summer_clothing",
+          "daily_units_sold": 364,
+          "daily_revenue": 7406.199337607861,
+          "avg_order_value": 102.06245420049495,
+          "unique_customers": 296
+        },
+        {
+          "date": "2024-07-22",
+          "category": "electronics",
+          "daily_units_sold": 233,
+          "daily_revenue": 23489.69528826484,
+          "avg_order_value": 135.0265537546839,
+          "unique_customers": 159
+        },
+        {
+          "date": "2024-07-22",
+          "category": "home_goods",
+          "daily_units_sold": 73,
+          "daily_revenue": 19077.381242578864,
+          "avg_order_value": 128.53854873032736,
+          "unique_customers": 50
+        },
+        {
+          "date": "2024-07-22",
+          "category": "outdoor_equipment",
+          "daily_units_sold": 51,
+          "daily_revenue": 12725.0670470276,
+          "avg_order_value": 46.15550774226677,
+          "unique_customers": 42
+        },
+        {
+          "date": "2024-07-23",
+          "category": "winter_clothing",
+          "daily_units_sold": 36,
+          "daily_revenue": 6305.024401946751,
+          "avg_order_value": 126.31701628916134,
+          "unique_customers": 31
+        },
+        {
+          "date": "2024-07-23",
+          "category": "summer_clothing",
+          "daily_units_sold": 375,
+          "daily_revenue": 10098.31062994075,
+          "avg_order_value": 112.5534032328915,
+          "unique_customers": 251
+        },
+        {
+          "date": "2024-07-23",
+          "category": "electronics",
+          "daily_units_sold": 194,
+          "daily_revenue": 14160.858695473917,
+          "avg_order_value": 105.94928092523642,
+          "unique_customers": 150
+        },
+        {
+          "date": "2024-07-23",
+          "category": "home_goods",
+          "daily_units_sold": 92,
+          "daily_revenue": 10821.12420296598,
+          "avg_order_value": 139.53170956225046,
+          "unique_customers": 62
+        },
+        {
+          "date": "2024-07-23",
+          "category": "outdoor_equipment",
+          "daily_units_sold": 71,
+          "daily_revenue": 18698.447759608138,
+          "avg_order_value": 77.0049771072909,
+          "unique_customers": 47
+        },
+        {
+          "date": "2024-07-24",
+          "category": "winter_clothing",
+          "daily_units_sold": 21,
+          "daily_revenue": 4792.800457134157,
+          "avg_order_value": 105.29379541093932,
+          "unique_customers": 18
+        },
+        {
+          "date": "2024-07-24",
+          "category": "summer_clothing",
+          "daily_units_sold": 216,
+          "daily_revenue": 25152.80827257025,
+          "avg_order_value": 100.55622135846019,
+          "unique_customers": 137
+        },
+        {
+          "date": "2024-07-24",
+          "category": "electronics",
+          "daily_units_sold": 194,
+          "daily_revenue": 39388.40276530783,
+          "avg_order_value": 122.69463342947996,
+          "unique_customers": 124
+        },
+        {
+          "date": "2024-07-24",
+          "category": "home_goods",
+          "daily_units_sold": 95,
+          "daily_revenue": 2334.861626949131,
+          "avg_order_value": 127.19227787976716,
+          "unique_customers": 80
+        },
+        {
+          "date": "2024-07-24",
+          "category": "outdoor_equipment",
+          "daily_units_sold": 60,
+          "daily_revenue": 16222.386209858434,
+          "avg_order_value": 62.2195395498838,
+          "unique_customers": 46
+        },
+        {
+          "date": "2024-07-25",
+          "category": "winter_clothing",
+          "daily_units_sold": 27,
+          "daily_revenue": 6060.771502680892,
+          "avg_order_value": 132.26618086461957,
+          "unique_customers": 22
+        },
+        {
+          "date": "2024-07-25",
+          "category": "summer_clothing",
+          "daily_units_sold": 362,
+          "daily_revenue": 105714.87333356636,
+          "avg_order_value": 57.87666278253696,
+          "unique_customers": 261
+        },
+        {
+          "date": "2024-07-25",
+          "category": "electronics",
+          "daily_units_sold": 224,
+          "daily_revenue": 7965.275570920968,
+          "avg_order_value": 177.09357081750917,
+          "unique_customers": 171
+        },
+        {
+          "date": "2024-07-25",
+          "category": "home_goods",
+          "daily_units_sold": 53,
+          "daily_revenue": 9807.998107999414,
+          "avg_order_value": 50.927518426271995,
+          "unique_customers": 38
+        },
+        {
+          "date": "2024-07-25",
+          "category": "outdoor_equipment",
+          "daily_units_sold": 52,
+          "daily_revenue": 2085.3532951366446,
+          "avg_order_value": 140.40950303934608,
+          "unique_customers": 35
+        },
+        {
+          "date": "2024-07-26",
+          "category": "winter_clothing",
+          "daily_units_sold": 22,
+          "daily_revenue": 5703.856850533303,
+          "avg_order_value": 45.06075055842691,
+          "unique_customers": 18
+        },
+        {
+          "date": "2024-07-26",
+          "category": "summer_clothing",
+          "daily_units_sold": 233,
+          "daily_revenue": 16046.905457293355,
+          "avg_order_value": 69.19112644574724,
+          "unique_customers": 154
+        },
+        {
+          "date": "2024-07-26",
+          "category": "electronics",
+          "daily_units_sold": 200,
+          "daily_revenue": 58179.68647641901,
+          "avg_order_value": 61.51970094548636,
+          "unique_customers": 137
+        },
+        {
+          "date": "2024-07-26",
+          "category": "home_goods",
+          "daily_units_sold": 79,
+          "daily_revenue": 3594.061365348865,
+          "avg_order_value": 52.377345224482916,
+          "unique_customers": 56
+        },
+        {
+          "date": "2024-07-26",
+          "category": "outdoor_equipment",
+          "daily_units_sold": 57,
+          "daily_revenue": 7938.879871597674,
+          "avg_order_value": 46.242455842754126,
+          "unique_customers": 44
+        },
+        {
+          "date": "2024-07-27",
+          "category": "winter_clothing",
+          "daily_units_sold": 42,
+          "daily_revenue": 8551.187089701652,
+          "avg_order_value": 144.52452975824522,
+          "unique_customers": 29
+        },
+        {
+          "date": "2024-07-27",
+          "category": "summer_clothing",
+          "daily_units_sold": 461,
+          "daily_revenue": 77122.28392712747,
+          "avg_order_value": 135.83932442866535,
+          "unique_customers": 277
+        },
+        {
+          "date": "2024-07-27",
+          "category": "electronics",
+          "daily_units_sold": 181,
+          "daily_revenue": 50560.77150324891,
+          "avg_order_value": 78.96689413574936,
+          "unique_customers": 127
+        },
+        {
+          "date": "2024-07-27",
+          "category": "home_goods",
+          "daily_units_sold": 64,
+          "daily_revenue": 9271.378040466381,
+          "avg_order_value": 45.531047423593385,
+          "unique_customers": 54
+        },
+        {
+          "date": "2024-07-27",
+          "category": "outdoor_equipment",
+          "daily_units_sold": 90,
+          "daily_revenue": 9545.91190445629,
+          "avg_order_value": 70.29165134851982,
+          "unique_customers": 66
+        },
+        {
+          "date": "2024-07-28",
+          "category": "winter_clothing",
+          "daily_units_sold": 31,
+          "daily_revenue": 760.0065063478453,
+          "avg_order_value": 176.49589336241985,
+          "unique_customers": 27
+        },
+        {
+          "date": "2024-07-28",
+          "category": "summer_clothing",
+          "daily_units_sold": 399,
+          "daily_revenue": 27188.12650021729,
+          "avg_order_value": 175.37829036047512,
+          "unique_customers": 333
+        },
+        {
+          "date": "2024-07-28",
+          "category": "electronics",
+          "daily_units_sold": 225,
+          "daily_revenue": 56176.91172908225,
+          "avg_order_value": 127.01934824542245,
+          "unique_customers": 198
+        },
+        {
+          "date": "2024-07-28",
+          "category": "home_goods",
+          "daily_units_sold": 113,
+          "daily_revenue": 6117.75765055769,
+          "avg_order_value": 117.42202033984631,
+          "unique_customers": 75
+        },
+        {
+          "date": "2024-07-28",
+          "category": "outdoor_equipment",
+          "daily_units_sold": 77,
+          "daily_revenue": 6637.657094298505,
+          "avg_order_value": 143.7455685679148,
+          "unique_customers": 58
+        }
+      ],
+      "marketing_campaigns": [
+        {
+          "campaign_name": "Winter Warmth Campaign",
+          "channel": "social_media",
+          "target_category": "winter_clothing",
+          "budget": 25000,
+          "impressions": 225357,
+          "clicks": 16281,
+          "conversions": 3356,
+          "revenue": 284909.18,
+          "roas": 11.4,
+          "ctr": 7.225,
+          "conversion_rate": 20.61
+        },
+        {
+          "campaign_name": "Summer Adventure Series",
+          "channel": "search_ads",
+          "target_category": "outdoor_equipment",
+          "budget": 35000,
+          "impressions": 351055,
+          "clicks": 10260,
+          "conversions": 3012,
+          "revenue": 499044.12,
+          "roas": 14.26,
+          "ctr": 2.923,
+          "conversion_rate": 29.36
+        },
+        {
+          "campaign_name": "Tech Tuesday Promotions",
+          "channel": "email",
+          "target_category": "electronics",
+          "budget": 8000,
+          "impressions": 110060,
+          "clicks": 5568,
+          "conversions": 1239,
+          "revenue": 215050.07,
+          "roas": 26.88,
+          "ctr": 5.059,
+          "conversion_rate": 22.25
+        },
+        {
+          "campaign_name": "Home Comfort Collection",
+          "channel": "display_ads",
+          "target_category": "home_goods",
+          "budget": 15000,
+          "impressions": 135157,
+          "clicks": 3350,
+          "conversions": 650,
+          "revenue": 73923.62,
+          "roas": 4.93,
+          "ctr": 2.479,
+          "conversion_rate": 19.4
+        },
+        {
+          "campaign_name": "Weekend Warrior Campaign",
+          "channel": "influencer",
+          "target_category": "outdoor_equipment",
+          "budget": 20000,
+          "impressions": 286335,
+          "clicks": 13687,
+          "conversions": 3264,
+          "revenue": 567108.66,
+          "roas": 28.36,
+          "ctr": 4.78,
+          "conversion_rate": 23.85
+        }
+      ],
+      "customer_service": [
+        {
+          "ticket_id": "TK-34002",
+          "created_date": "2025-06-19",
+          "ticket_type": "technical_support",
+          "priority": "high",
+          "resolution_hours": 14.5,
+          "customer_satisfaction": 2.571495559003782,
+          "requires_escalation": false
+        },
+        {
+          "ticket_id": "TK-83946",
+          "created_date": "2025-06-19",
+          "ticket_type": "product_defect",
+          "priority": "high",
+          "resolution_hours": 4.5,
+          "customer_satisfaction": 2.5557982354928903,
+          "requires_escalation": false
+        },
+        {
+          "ticket_id": "TK-32805",
+          "created_date": "2025-06-19",
+          "ticket_type": "technical_support",
+          "priority": "urgent",
+          "resolution_hours": 5.9,
+          "customer_satisfaction": 4.231602827272263,
+          "requires_escalation": false
+        },
+        {
+          "ticket_id": "TK-68558",
+          "created_date": "2025-06-19",
+          "ticket_type": "billing_inquiry",
+          "priority": "high",
+          "resolution_hours": 23.7,
+          "customer_satisfaction": 3.052049999880966,
+          "requires_escalation": false
+        },
+        {
+          "ticket_id": "TK-66386",
+          "created_date": "2025-06-19",
+          "ticket_type": "technical_support",
+          "priority": "medium",
+          "resolution_hours": 57.9,
+          "customer_satisfaction": 3.0319049660540207,
+          "requires_escalation": false
+        },
+        {
+          "ticket_id": "TK-18829",
+          "created_date": "2025-06-19",
+          "ticket_type": "product_defect",
+          "priority": "high",
+          "resolution_hours": 11.3,
+          "customer_satisfaction": 3.275709960489168,
+          "requires_escalation": false
+        },
+        {
+          "ticket_id": "TK-43229",
+          "created_date": "2025-06-19",
+          "ticket_type": "return_request",
+          "priority": "high",
+          "resolution_hours": 5.5,
+          "customer_satisfaction": 3.2827627863948434,
+          "requires_escalation": true
+        },
+        {
+          "ticket_id": "TK-49280",
+          "created_date": "2025-06-19",
+          "ticket_type": "billing_inquiry",
+          "priority": "low",
+          "resolution_hours": 26.9,
+          "customer_satisfaction": 2.563044000733804,
+          "requires_escalation": false
+        },
+        {
+          "ticket_id": "TK-24012",
+          "created_date": "2025-06-19",
+          "ticket_type": "product_defect",
+          "priority": "high",
+          "resolution_hours": 11.2,
+          "customer_satisfaction": 4.4981622854410865,
+          "requires_escalation": false
+        },
+        {
+          "ticket_id": "TK-91243",
+          "created_date": "2025-06-19",
+          "ticket_type": "billing_inquiry",
+          "priority": "urgent",
+          "resolution_hours": 6.9,
+          "customer_satisfaction": 3.0109731522643752,
+          "requires_escalation": false
+        },
+        {
+          "ticket_id": "TK-73143",
+          "created_date": "2025-06-19",
+          "ticket_type": "return_request",
+          "priority": "medium",
+          "resolution_hours": 66.7,
+          "customer_satisfaction": 4.322528239243238,
+          "requires_escalation": false
+        },
+        {
+          "ticket_id": "TK-31156",
+          "created_date": "2025-06-19",
+          "ticket_type": "technical_support",
+          "priority": "medium",
+          "resolution_hours": 53.7,
+          "customer_satisfaction": 3.8028373073790203,
+          "requires_escalation": false
+        },
+        {
+          "ticket_id": "TK-73000",
+          "created_date": "2025-06-19",
+          "ticket_type": "technical_support",
+          "priority": "medium",
+          "resolution_hours": 49.6,
+          "customer_satisfaction": 4.625871220966067,
+          "requires_escalation": false
+        },
+        {
+          "ticket_id": "TK-48193",
+          "created_date": "2025-06-19",
+          "ticket_type": "return_request",
+          "priority": "high",
+          "resolution_hours": 22.9,
+          "customer_satisfaction": 3.4944184819786757,
+          "requires_escalation": false
+        },
+        {
+          "ticket_id": "TK-67308",
+          "created_date": "2025-06-19",
+          "ticket_type": "product_defect",
+          "priority": "low",
+          "resolution_hours": 73.5,
+          "customer_satisfaction": 4.870208475269056,
+          "requires_escalation": false
+        },
+        {
+          "ticket_id": "TK-16987",
+          "created_date": "2025-06-19",
+          "ticket_type": "return_request",
+          "priority": "high",
+          "resolution_hours": 15.4,
+          "customer_satisfaction": 2.733246475794481,
+          "requires_escalation": true
+        },
+        {
+          "ticket_id": "TK-43715",
+          "created_date": "2025-06-19",
+          "ticket_type": "shipping_delay",
+          "priority": "urgent",
+          "resolution_hours": 4.9,
+          "customer_satisfaction": 2.6296041559371086,
+          "requires_escalation": true
+        },
+        {
+          "ticket_id": "TK-72613",
+          "created_date": "2025-06-19",
+          "ticket_type": "technical_support",
+          "priority": "medium",
+          "resolution_hours": 27.8,
+          "customer_satisfaction": 3.101629118408706,
+          "requires_escalation": false
+        },
+        {
+          "ticket_id": "TK-55818",
+          "created_date": "2025-06-20",
+          "ticket_type": "billing_inquiry",
+          "priority": "low",
+          "resolution_hours": 83.2,
+          "customer_satisfaction": 3.3946097369627295,
+          "requires_escalation": false
+        },
+        {
+          "ticket_id": "TK-20339",
+          "created_date": "2025-06-20",
+          "ticket_type": "billing_inquiry",
+          "priority": "low",
+          "resolution_hours": 61.8,
+          "customer_satisfaction": 3.9809645429414324,
+          "requires_escalation": false
+        },
+        {
+          "ticket_id": "TK-75066",
+          "created_date": "2025-06-20",
+          "ticket_type": "return_request",
+          "priority": "high",
+          "resolution_hours": 7.0,
+          "customer_satisfaction": 2.51126130719309,
+          "requires_escalation": false
+        },
+        {
+          "ticket_id": "TK-79020",
+          "created_date": "2025-06-20",
+          "ticket_type": "technical_support",
+          "priority": "low",
+          "resolution_hours": 26.0,
+          "customer_satisfaction": 3.1962191746882973,
+          "requires_escalation": false
+        },
+        {
+          "ticket_id": "TK-44998",
+          "created_date": "2025-06-20",
+          "ticket_type": "technical_support",
+          "priority": "medium",
+          "resolution_hours": 37.7,
+          "customer_satisfaction": 4.744223862760626,
+          "requires_escalation": false
+        },
+        {
+          "ticket_id": "TK-51305",
+          "created_date": "2025-06-20",
+          "ticket_type": "product_defect",
+          "priority": "urgent",
+          "resolution_hours": 6.6,
+          "customer_satisfaction": 3.45120663464205,
+          "requires_escalation": true
+        },
+        {
+          "ticket_id": "TK-42982",
+          "created_date": "2025-06-20",
+          "ticket_type": "product_defect",
+          "priority": "high",
+          "resolution_hours": 6.8,
+          "customer_satisfaction": 4.37762469031045,
+          "requires_escalation": false
+        }
+      ],
+      "weather_patterns": [
+        {
+          "date": "2025-06-19",
+          "temperature_c": 24.7,
+          "humidity_percent": 48,
+          "weather_condition": "cloudy",
+          "outdoor_equipment_sales": 26,
+          "winter_clothing_sales": 45,
+          "correlation_strength": 0.483
+        },
+        {
+          "date": "2025-06-20",
+          "temperature_c": 17.6,
+          "humidity_percent": 58,
+          "weather_condition": "cloudy",
+          "outdoor_equipment_sales": 21,
+          "winter_clothing_sales": 55,
+          "correlation_strength": 0.3
+        },
+        {
+          "date": "2025-06-21",
+          "temperature_c": 34.7,
+          "humidity_percent": 57,
+          "weather_condition": "sunny",
+          "outdoor_equipment_sales": 57,
+          "winter_clothing_sales": 1,
+          "correlation_strength": 0.986
+        },
+        {
+          "date": "2025-06-22",
+          "temperature_c": 21.5,
+          "humidity_percent": 53,
+          "weather_condition": "cloudy",
+          "outdoor_equipment_sales": 15,
+          "winter_clothing_sales": 64,
+          "correlation_strength": 0.325
+        },
+        {
+          "date": "2025-06-23",
+          "temperature_c": 27.4,
+          "humidity_percent": 89,
+          "weather_condition": "rainy",
+          "outdoor_equipment_sales": 37,
+          "winter_clothing_sales": 40,
+          "correlation_strength": 0.618
+        },
+        {
+          "date": "2025-06-24",
+          "temperature_c": 30.1,
+          "humidity_percent": 85,
+          "weather_condition": "rainy",
+          "outdoor_equipment_sales": 50,
+          "winter_clothing_sales": 25,
+          "correlation_strength": 0.753
+        },
+        {
+          "date": "2025-06-25",
+          "temperature_c": 22.4,
+          "humidity_percent": 49,
+          "weather_condition": "cloudy",
+          "outdoor_equipment_sales": 18,
+          "winter_clothing_sales": 86,
+          "correlation_strength": 0.371
+        },
+        {
+          "date": "2025-06-26",
+          "temperature_c": 24.2,
+          "humidity_percent": 62,
+          "weather_condition": "cloudy",
+          "outdoor_equipment_sales": 27,
+          "winter_clothing_sales": 69,
+          "correlation_strength": 0.46
+        },
+        {
+          "date": "2025-06-27",
+          "temperature_c": 26.2,
+          "humidity_percent": 65,
+          "weather_condition": "cloudy",
+          "outdoor_equipment_sales": 42,
+          "winter_clothing_sales": 53,
+          "correlation_strength": 0.561
+        },
+        {
+          "date": "2025-06-28",
+          "temperature_c": 26.1,
+          "humidity_percent": 70,
+          "weather_condition": "cloudy",
+          "outdoor_equipment_sales": 41,
+          "winter_clothing_sales": 37,
+          "correlation_strength": 0.554
+        },
+        {
+          "date": "2025-06-29",
+          "temperature_c": 25.0,
+          "humidity_percent": 81,
+          "weather_condition": "rainy",
+          "outdoor_equipment_sales": 35,
+          "winter_clothing_sales": 41,
+          "correlation_strength": 0.5
+        },
+        {
+          "date": "2025-06-30",
+          "temperature_c": 15.0,
+          "humidity_percent": 75,
+          "weather_condition": "rainy",
+          "outdoor_equipment_sales": 19,
+          "winter_clothing_sales": 76,
+          "correlation_strength": 0.3
+        },
+        {
+          "date": "2025-07-01",
+          "temperature_c": 15.3,
+          "humidity_percent": 70,
+          "weather_condition": "cloudy",
+          "outdoor_equipment_sales": 17,
+          "winter_clothing_sales": 82,
+          "correlation_strength": 0.3
+        },
+        {
+          "date": "2025-07-02",
+          "temperature_c": 34.0,
+          "humidity_percent": 41,
+          "weather_condition": "sunny",
+          "outdoor_equipment_sales": 61,
+          "winter_clothing_sales": 3,
+          "correlation_strength": 0.948
+        },
+        {
+          "date": "2025-07-03",
+          "temperature_c": 21.5,
+          "humidity_percent": 63,
+          "weather_condition": "cloudy",
+          "outdoor_equipment_sales": 19,
+          "winter_clothing_sales": 92,
+          "correlation_strength": 0.325
+        },
+        {
+          "date": "2025-07-04",
+          "temperature_c": 23.5,
+          "humidity_percent": 68,
+          "weather_condition": "cloudy",
+          "outdoor_equipment_sales": 27,
+          "winter_clothing_sales": 60,
+          "correlation_strength": 0.424
+        },
+        {
+          "date": "2025-07-05",
+          "temperature_c": 31.7,
+          "humidity_percent": 87,
+          "weather_condition": "rainy",
+          "outdoor_equipment_sales": 54,
+          "winter_clothing_sales": 20,
+          "correlation_strength": 0.836
+        },
+        {
+          "date": "2025-07-06",
+          "temperature_c": 34.8,
+          "humidity_percent": 82,
+          "weather_condition": "rainy",
+          "outdoor_equipment_sales": 74,
+          "winter_clothing_sales": 0,
+          "correlation_strength": 0.99
+        },
+        {
+          "date": "2025-07-07",
+          "temperature_c": 17.8,
+          "humidity_percent": 85,
+          "weather_condition": "rainy",
+          "outdoor_equipment_sales": 18,
+          "winter_clothing_sales": 69,
+          "correlation_strength": 0.3
+        },
+        {
+          "date": "2025-07-08",
+          "temperature_c": 25.4,
+          "humidity_percent": 42,
+          "weather_condition": "sunny",
+          "outdoor_equipment_sales": 27,
+          "winter_clothing_sales": 52,
+          "correlation_strength": 0.518
+        },
+        {
+          "date": "2025-07-09",
+          "temperature_c": 31.0,
+          "humidity_percent": 69,
+          "weather_condition": "cloudy",
+          "outdoor_equipment_sales": 46,
+          "winter_clothing_sales": 15,
+          "correlation_strength": 0.799
+        },
+        {
+          "date": "2025-07-10",
+          "temperature_c": 23.0,
+          "humidity_percent": 87,
+          "weather_condition": "rainy",
+          "outdoor_equipment_sales": 19,
+          "winter_clothing_sales": 69,
+          "correlation_strength": 0.398
+        },
+        {
+          "date": "2025-07-11",
+          "temperature_c": 33.9,
+          "humidity_percent": 66,
+          "weather_condition": "cloudy",
+          "outdoor_equipment_sales": 66,
+          "winter_clothing_sales": 5,
+          "correlation_strength": 0.947
+        },
+        {
+          "date": "2025-07-12",
+          "temperature_c": 15.1,
+          "humidity_percent": 89,
+          "weather_condition": "rainy",
+          "outdoor_equipment_sales": 19,
+          "winter_clothing_sales": 49,
+          "correlation_strength": 0.3
+        },
+        {
+          "date": "2025-07-13",
+          "temperature_c": 20.3,
+          "humidity_percent": 45,
+          "weather_condition": "cloudy",
+          "outdoor_equipment_sales": 23,
+          "winter_clothing_sales": 90,
+          "correlation_strength": 0.3
+        },
+        {
+          "date": "2025-07-14",
+          "temperature_c": 26.0,
+          "humidity_percent": 57,
+          "weather_condition": "sunny",
+          "outdoor_equipment_sales": 35,
+          "winter_clothing_sales": 35,
+          "correlation_strength": 0.55
+        },
+        {
+          "date": "2025-07-15",
+          "temperature_c": 15.7,
+          "humidity_percent": 41,
+          "weather_condition": "cloudy",
+          "outdoor_equipment_sales": 14,
+          "winter_clothing_sales": 90,
+          "correlation_strength": 0.3
+        },
+        {
+          "date": "2025-07-16",
+          "temperature_c": 33.7,
+          "humidity_percent": 59,
+          "weather_condition": "sunny",
+          "outdoor_equipment_sales": 69,
+          "winter_clothing_sales": 7,
+          "correlation_strength": 0.937
+        },
+        {
+          "date": "2025-07-17",
+          "temperature_c": 24.2,
+          "humidity_percent": 48,
+          "weather_condition": "cloudy",
+          "outdoor_equipment_sales": 33,
+          "winter_clothing_sales": 50,
+          "correlation_strength": 0.461
+        },
+        {
+          "date": "2025-07-18",
+          "temperature_c": 16.3,
+          "humidity_percent": 76,
+          "weather_condition": "rainy",
+          "outdoor_equipment_sales": 16,
+          "winter_clothing_sales": 84,
+          "correlation_strength": 0.3
+        }
+      ],
+      "product_catalog": [
+        {
+          "product_name": "UltraWarm Winter Jacket",
+          "category": "winter_clothing",
+          "price": 129.99,
+          "units_sold_30d": 90,
+          "revenue_30d": 11699.1,
+          "profit_margin": 0.45,
+          "return_rate": 3.33,
+          "customer_rating": 4.0,
+          "inventory_turns": 4.7
+        },
+        {
+          "product_name": "SummerBreeze Shorts",
+          "category": "summer_clothing",
+          "price": 39.99,
+          "units_sold_30d": 317,
+          "revenue_30d": 12676.83,
+          "profit_margin": 0.55,
+          "return_rate": 6.62,
+          "customer_rating": 4.4,
+          "inventory_turns": 4.4
+        },
+        {
+          "product_name": "TechPro Wireless Earbuds",
+          "category": "electronics",
+          "price": 159.99,
+          "units_sold_30d": 371,
+          "revenue_30d": 59356.29,
+          "profit_margin": 0.35,
+          "return_rate": 11.32,
+          "customer_rating": 4.4,
+          "inventory_turns": 6.2
+        },
+        {
+          "product_name": "ComfortZone Throw Pillow",
+          "category": "home_goods",
+          "price": 24.99,
+          "units_sold_30d": 464,
+          "revenue_30d": 11595.36,
+          "profit_margin": 0.6,
+          "return_rate": 7.11,
+          "customer_rating": 4.8,
+          "inventory_turns": 10.6
+        },
+        {
+          "product_name": "AdventureMax Hiking Boots",
+          "category": "outdoor_equipment",
+          "price": 199.99,
+          "units_sold_30d": 304,
+          "revenue_30d": 60796.96,
+          "profit_margin": 0.42,
+          "return_rate": 3.95,
+          "customer_rating": 4.4,
+          "inventory_turns": 9.0
+        }
+      ]
+    },
+    "key_insights": [
+      {
+        "insight": "Weather-Sales Correlation Discovery",
+        "description": "AI identified 23% correlation between temperature and specific product categories",
+        "business_impact": "Enabled predictive inventory management saving $340K in excess inventory costs",
+        "correlation_strength": 0.23,
+        "p_value": 0.0023,
+        "sample_size": 15000
+      },
+      {
+        "insight": "Customer Service Predictive Alert",
+        "description": "Service ticket volume predicts negative reviews 48 hours in advance",
+        "business_impact": "Reduced negative reviews by 35% through proactive intervention",
+        "correlation_strength": 0.67,
+        "p_value": 0.0001,
+        "sample_size": 8500
+      },
+      {
+        "insight": "Marketing Channel Attribution",
+        "description": "Cross-platform customer journey reveals true channel ROI",
+        "business_impact": "Redirected $500K marketing budget to 40% higher ROI channels",
+        "correlation_strength": 0.84,
+        "p_value": 1.2e-06,
+        "sample_size": 25000
+      }
+    ],
+    "demo_flow": [
+      "Show real-time dashboard with multiple data streams",
+      "Demonstrate AI discovering weather-sales correlation",
+      "Navigate to predictive customer service alerts",
+      "Calculate ROI from marketing channel optimization",
+      "Show geographic performance patterns"
+    ]
+  },
+  "manufacturing": {
+    "title": "Manufacturing Operations Intelligence Demo",
+    "business_problem": "Disconnected operational data affecting efficiency and quality",
+    "roi_calculation": {
+      "downtime_reduction": "35% reduction in unplanned downtime",
+      "quality_improvement": "27% decrease in defect rates",
+      "maintenance_optimization": "$1.2M annual savings in maintenance costs",
+      "efficiency_gains": "18% improvement in overall equipment effectiveness (OEE)"
+    },
+    "data_sources": {
+      "production_metrics": [
+        {
+          "date": "2025-06-19",
+          "machine_line": "Line_A",
+          "planned_production": 1000,
+          "actual_production": 951,
+          "efficiency_percent": 95.1,
+          "downtime_hours": 3.41,
+          "oee_score": 0.816,
+          "quality_score": 0.9696
+        },
+        {
+          "date": "2025-06-19",
+          "machine_line": "Line_B",
+          "planned_production": 1000,
+          "actual_production": 926,
+          "efficiency_percent": 92.6,
+          "downtime_hours": 0.58,
+          "oee_score": 0.904,
+          "quality_score": 0.9596
+        },
+        {
+          "date": "2025-06-19",
+          "machine_line": "Line_C",
+          "planned_production": 1000,
+          "actual_production": 949,
+          "efficiency_percent": 94.9,
+          "downtime_hours": 0,
+          "oee_score": 0.949,
+          "quality_score": 0.9782
+        },
+        {
+          "date": "2025-06-19",
+          "machine_line": "Line_D",
+          "planned_production": 1000,
+          "actual_production": 921,
+          "efficiency_percent": 92.1,
+          "downtime_hours": 2.2,
+          "oee_score": 0.837,
+          "quality_score": 0.9405
+        },
+        {
+          "date": "2025-06-20",
+          "machine_line": "Line_A",
+          "planned_production": 1000,
+          "actual_production": 952,
+          "efficiency_percent": 95.2,
+          "downtime_hours": 0,
+          "oee_score": 0.952,
+          "quality_score": 0.9668
+        },
+        {
+          "date": "2025-06-20",
+          "machine_line": "Line_B",
+          "planned_production": 1000,
+          "actual_production": 949,
+          "efficiency_percent": 94.9,
+          "downtime_hours": 3.84,
+          "oee_score": 0.797,
+          "quality_score": 0.9686
+        },
+        {
+          "date": "2025-06-20",
+          "machine_line": "Line_C",
+          "planned_production": 1000,
+          "actual_production": 996,
+          "efficiency_percent": 99.6,
+          "downtime_hours": 0,
+          "oee_score": 0.996,
+          "quality_score": 0.9405
+        },
+        {
+          "date": "2025-06-20",
+          "machine_line": "Line_D",
+          "planned_production": 1000,
+          "actual_production": 852,
+          "efficiency_percent": 85.2,
+          "downtime_hours": 0,
+          "oee_score": 0.852,
+          "quality_score": 0.9672
+        },
+        {
+          "date": "2025-06-21",
+          "machine_line": "Line_A",
+          "planned_production": 1000,
+          "actual_production": 985,
+          "efficiency_percent": 98.5,
+          "downtime_hours": 1.05,
+          "oee_score": 0.942,
+          "quality_score": 0.9787
+        },
+        {
+          "date": "2025-06-21",
+          "machine_line": "Line_B",
+          "planned_production": 1000,
+          "actual_production": 907,
+          "efficiency_percent": 90.7,
+          "downtime_hours": 0,
+          "oee_score": 0.907,
+          "quality_score": 0.9414
+        },
+        {
+          "date": "2025-06-21",
+          "machine_line": "Line_C",
+          "planned_production": 1000,
+          "actual_production": 872,
+          "efficiency_percent": 87.2,
+          "downtime_hours": 0,
+          "oee_score": 0.872,
+          "quality_score": 0.9699
+        },
+        {
+          "date": "2025-06-21",
+          "machine_line": "Line_D",
+          "planned_production": 1000,
+          "actual_production": 963,
+          "efficiency_percent": 96.3,
+          "downtime_hours": 0,
+          "oee_score": 0.963,
+          "quality_score": 0.9765
+        },
+        {
+          "date": "2025-06-22",
+          "machine_line": "Line_A",
+          "planned_production": 1000,
+          "actual_production": 915,
+          "efficiency_percent": 91.5,
+          "downtime_hours": 0,
+          "oee_score": 0.915,
+          "quality_score": 0.943
+        },
+        {
+          "date": "2025-06-22",
+          "machine_line": "Line_B",
+          "planned_production": 1000,
+          "actual_production": 961,
+          "efficiency_percent": 96.1,
+          "downtime_hours": 1.59,
+          "oee_score": 0.897,
+          "quality_score": 0.955
+        },
+        {
+          "date": "2025-06-22",
+          "machine_line": "Line_C",
+          "planned_production": 1000,
+          "actual_production": 815,
+          "efficiency_percent": 81.5,
+          "downtime_hours": 0,
+          "oee_score": 0.815,
+          "quality_score": 0.9643
+        },
+        {
+          "date": "2025-06-22",
+          "machine_line": "Line_D",
+          "planned_production": 1000,
+          "actual_production": 906,
+          "efficiency_percent": 90.6,
+          "downtime_hours": 3.14,
+          "oee_score": 0.788,
+          "quality_score": 0.9621
+        },
+        {
+          "date": "2025-06-23",
+          "machine_line": "Line_A",
+          "planned_production": 1000,
+          "actual_production": 1001,
+          "efficiency_percent": 100.1,
+          "downtime_hours": 0,
+          "oee_score": 1.001,
+          "quality_score": 0.9873
+        },
+        {
+          "date": "2025-06-23",
+          "machine_line": "Line_B",
+          "planned_production": 1000,
+          "actual_production": 896,
+          "efficiency_percent": 89.6,
+          "downtime_hours": 0,
+          "oee_score": 0.896,
+          "quality_score": 0.9605
+        },
+        {
+          "date": "2025-06-23",
+          "machine_line": "Line_C",
+          "planned_production": 1000,
+          "actual_production": 917,
+          "efficiency_percent": 91.7,
+          "downtime_hours": 0,
+          "oee_score": 0.917,
+          "quality_score": 0.9633
+        },
+        {
+          "date": "2025-06-23",
+          "machine_line": "Line_D",
+          "planned_production": 1000,
+          "actual_production": 920,
+          "efficiency_percent": 92.0,
+          "downtime_hours": 0,
+          "oee_score": 0.92,
+          "quality_score": 0.9431
+        }
+      ],
+      "quality_control": [
+        {
+          "batch_id": "BATCH-6970",
+          "production_line": "Line_A",
+          "defect_type": "dimensional",
+          "defect_rate": 0.05,
+          "humidity_percent": 47.9,
+          "temperature_c": 24.8,
+          "units_inspected": 591,
+          "defective_units": 29,
+          "inspector": "Inspector_7"
+        },
+        {
+          "batch_id": "BATCH-6315",
+          "production_line": "Line_C",
+          "defect_type": "dimensional",
+          "defect_rate": 0.05,
+          "humidity_percent": 81.1,
+          "temperature_c": 22.3,
+          "units_inspected": 656,
+          "defective_units": 39,
+          "inspector": "Inspector_1"
+        },
+        {
+          "batch_id": "BATCH-8973",
+          "production_line": "Line_B",
+          "defect_type": "material",
+          "defect_rate": 0.05,
+          "humidity_percent": 52.3,
+          "temperature_c": 25.0,
+          "units_inspected": 626,
+          "defective_units": 48,
+          "inspector": "Inspector_1"
+        },
+        {
+          "batch_id": "BATCH-9007",
+          "production_line": "Line_B",
+          "defect_type": "surface_finish",
+          "defect_rate": 0.18,
+          "humidity_percent": 79.1,
+          "temperature_c": 21.7,
+          "units_inspected": 610,
+          "defective_units": 96,
+          "inspector": "Inspector_8"
+        },
+        {
+          "batch_id": "BATCH-8621",
+          "production_line": "Line_D",
+          "defect_type": "surface_finish",
+          "defect_rate": 0.05,
+          "humidity_percent": 44.1,
+          "temperature_c": 27.2,
+          "units_inspected": 542,
+          "defective_units": 34,
+          "inspector": "Inspector_3"
+        },
+        {
+          "batch_id": "BATCH-5013",
+          "production_line": "Line_C",
+          "defect_type": "dimensional",
+          "defect_rate": 0.12,
+          "humidity_percent": 80.3,
+          "temperature_c": 26.5,
+          "units_inspected": 739,
+          "defective_units": 64,
+          "inspector": "Inspector_1"
+        },
+        {
+          "batch_id": "BATCH-1935",
+          "production_line": "Line_A",
+          "defect_type": "material",
+          "defect_rate": 0.05,
+          "humidity_percent": 36.5,
+          "temperature_c": 22.0,
+          "units_inspected": 874,
+          "defective_units": 30,
+          "inspector": "Inspector_8"
+        },
+        {
+          "batch_id": "BATCH-7187",
+          "production_line": "Line_B",
+          "defect_type": "material",
+          "defect_rate": 0.05,
+          "humidity_percent": 36.6,
+          "temperature_c": 21.9,
+          "units_inspected": 625,
+          "defective_units": 38,
+          "inspector": "Inspector_3"
+        },
+        {
+          "batch_id": "BATCH-2142",
+          "production_line": "Line_A",
+          "defect_type": "electrical",
+          "defect_rate": 0.05,
+          "humidity_percent": 71.7,
+          "temperature_c": 21.2,
+          "units_inspected": 784,
+          "defective_units": 42,
+          "inspector": "Inspector_5"
+        },
+        {
+          "batch_id": "BATCH-3915",
+          "production_line": "Line_D",
+          "defect_type": "surface_finish",
+          "defect_rate": 0.18,
+          "humidity_percent": 77.6,
+          "temperature_c": 22.3,
+          "units_inspected": 734,
+          "defective_units": 120,
+          "inspector": "Inspector_2"
+        },
+        {
+          "batch_id": "BATCH-6634",
+          "production_line": "Line_A",
+          "defect_type": "material",
+          "defect_rate": 0.05,
+          "humidity_percent": 44.8,
+          "temperature_c": 25.8,
+          "units_inspected": 874,
+          "defective_units": 41,
+          "inspector": "Inspector_1"
+        },
+        {
+          "batch_id": "BATCH-2496",
+          "production_line": "Line_C",
+          "defect_type": "material",
+          "defect_rate": 0.05,
+          "humidity_percent": 65.4,
+          "temperature_c": 19.2,
+          "units_inspected": 791,
+          "defective_units": 35,
+          "inspector": "Inspector_7"
+        },
+        {
+          "batch_id": "BATCH-4046",
+          "production_line": "Line_B",
+          "defect_type": "assembly",
+          "defect_rate": 0.05,
+          "humidity_percent": 49.2,
+          "temperature_c": 18.2,
+          "units_inspected": 531,
+          "defective_units": 37,
+          "inspector": "Inspector_1"
+        },
+        {
+          "batch_id": "BATCH-5952",
+          "production_line": "Line_D",
+          "defect_type": "dimensional",
+          "defect_rate": 0.12,
+          "humidity_percent": 65.6,
+          "temperature_c": 27.6,
+          "units_inspected": 570,
+          "defective_units": 99,
+          "inspector": "Inspector_3"
+        },
+        {
+          "batch_id": "BATCH-2734",
+          "production_line": "Line_A",
+          "defect_type": "material",
+          "defect_rate": 0.05,
+          "humidity_percent": 52.3,
+          "temperature_c": 24.1,
+          "units_inspected": 995,
+          "defective_units": 37,
+          "inspector": "Inspector_7"
+        },
+        {
+          "batch_id": "BATCH-8263",
+          "production_line": "Line_B",
+          "defect_type": "dimensional",
+          "defect_rate": 0.05,
+          "humidity_percent": 79.1,
+          "temperature_c": 24.8,
+          "units_inspected": 849,
+          "defective_units": 36,
+          "inspector": "Inspector_7"
+        },
+        {
+          "batch_id": "BATCH-9158",
+          "production_line": "Line_A",
+          "defect_type": "material",
+          "defect_rate": 0.05,
+          "humidity_percent": 71.0,
+          "temperature_c": 21.9,
+          "units_inspected": 882,
+          "defective_units": 47,
+          "inspector": "Inspector_8"
+        },
+        {
+          "batch_id": "BATCH-8838",
+          "production_line": "Line_C",
+          "defect_type": "surface_finish",
+          "defect_rate": 0.05,
+          "humidity_percent": 38.0,
+          "temperature_c": 26.9,
+          "units_inspected": 516,
+          "defective_units": 44,
+          "inspector": "Inspector_1"
+        },
+        {
+          "batch_id": "BATCH-2904",
+          "production_line": "Line_B",
+          "defect_type": "dimensional",
+          "defect_rate": 0.05,
+          "humidity_percent": 59.8,
+          "temperature_c": 23.0,
+          "units_inspected": 963,
+          "defective_units": 47,
+          "inspector": "Inspector_6"
+        },
+        {
+          "batch_id": "BATCH-3613",
+          "production_line": "Line_B",
+          "defect_type": "surface_finish",
+          "defect_rate": 0.05,
+          "humidity_percent": 57.9,
+          "temperature_c": 25.3,
+          "units_inspected": 592,
+          "defective_units": 49,
+          "inspector": "Inspector_3"
+        }
+      ],
+      "equipment_maintenance": [
+        {
+          "equipment_id": "Conveyor_1",
+          "vibration_level": 2.36,
+          "operating_temperature": 45.2,
+          "days_since_maintenance": 60,
+          "maintenance_urgency": "medium",
+          "predicted_failure_days": 62,
+          "maintenance_cost_estimate": 3379,
+          "downtime_risk_hours": 3
+        },
+        {
+          "equipment_id": "Robot_Arm_2",
+          "vibration_level": 1.05,
+          "operating_temperature": 75.6,
+          "days_since_maintenance": 80,
+          "maintenance_urgency": "high",
+          "predicted_failure_days": 68,
+          "maintenance_cost_estimate": 2349,
+          "downtime_risk_hours": 48
+        },
+        {
+          "equipment_id": "Press_Machine_3",
+          "vibration_level": 1.24,
+          "operating_temperature": 82.9,
+          "days_since_maintenance": 167,
+          "maintenance_urgency": "high",
+          "predicted_failure_days": 12,
+          "maintenance_cost_estimate": 2106,
+          "downtime_risk_hours": 33
+        },
+        {
+          "equipment_id": "Quality_Scanner_4",
+          "vibration_level": 1.53,
+          "operating_temperature": 65.7,
+          "days_since_maintenance": 59,
+          "maintenance_urgency": "medium",
+          "predicted_failure_days": 71,
+          "maintenance_cost_estimate": 571,
+          "downtime_risk_hours": 7
+        },
+        {
+          "equipment_id": "Packaging_Unit_5",
+          "vibration_level": 0.61,
+          "operating_temperature": 74.7,
+          "days_since_maintenance": 74,
+          "maintenance_urgency": "medium",
+          "predicted_failure_days": 84,
+          "maintenance_cost_estimate": 936,
+          "downtime_risk_hours": 8
+        }
+      ],
+      "supply_chain": [
+        {
+          "supplier_name": "MetalCorp Inc",
+          "on_time_delivery_rate": 0.829,
+          "quality_rating": 0.936,
+          "cost_index": 0.91,
+          "lead_time_days": 25,
+          "order_accuracy": 0.957,
+          "total_orders_ytd": 201,
+          "defect_rate": 0.0095,
+          "supplier_score": 0.952
+        },
+        {
+          "supplier_name": "PlasticPro Ltd",
+          "on_time_delivery_rate": 0.929,
+          "quality_rating": 0.87,
+          "cost_index": 0.83,
+          "lead_time_days": 28,
+          "order_accuracy": 0.936,
+          "total_orders_ytd": 263,
+          "defect_rate": 0.036,
+          "supplier_score": 0.99
+        },
+        {
+          "supplier_name": "ElectroSupply Co",
+          "on_time_delivery_rate": 0.938,
+          "quality_rating": 0.973,
+          "cost_index": 0.9,
+          "lead_time_days": 7,
+          "order_accuracy": 0.956,
+          "total_orders_ytd": 218,
+          "defect_rate": 0.046,
+          "supplier_score": 1.004
+        },
+        {
+          "supplier_name": "PackageMaster",
+          "on_time_delivery_rate": 0.848,
+          "quality_rating": 0.979,
+          "cost_index": 0.83,
+          "lead_time_days": 45,
+          "order_accuracy": 0.923,
+          "total_orders_ytd": 56,
+          "defect_rate": 0.0237,
+          "supplier_score": 0.999
+        },
+        {
+          "supplier_name": "ComponentSource",
+          "on_time_delivery_rate": 0.797,
+          "quality_rating": 0.857,
+          "cost_index": 0.95,
+          "lead_time_days": 31,
+          "order_accuracy": 0.963,
+          "total_orders_ytd": 134,
+          "defect_rate": 0.0316,
+          "supplier_score": 0.901
+        }
+      ]
+    },
+    "key_insights": [
+      {
+        "insight": "Predictive Equipment Failure",
+        "description": "Vibration and temperature patterns predict bearing failures 5-7 days early",
+        "business_impact": "$1.2M saved in emergency repairs and production delays",
+        "correlation_strength": 0.89,
+        "p_value": 1e-05,
+        "sample_size": 3200
+      },
+      {
+        "insight": "Quality Root Cause Discovery",
+        "description": "Humidity levels in Building C correlated with 18% of product defects",
+        "business_impact": "Simple HVAC upgrade eliminated persistent quality issues",
+        "correlation_strength": 0.72,
+        "p_value": 0.0003,
+        "sample_size": 12500
+      },
+      {
+        "insight": "Supplier Performance Impact",
+        "description": "Material lot characteristics predict downstream quality issues",
+        "business_impact": "Supplier quality requirements updated, reducing defects by 31%",
+        "correlation_strength": 0.56,
+        "p_value": 0.0012,
+        "sample_size": 8900
+      }
+    ],
+    "demo_flow": [
+      "Display production dashboard with real-time OEE metrics",
+      "Show predictive maintenance alerts and cost savings",
+      "Demonstrate quality correlation analysis",
+      "Navigate supply chain performance optimization",
+      "Calculate total operational efficiency improvements"
+    ]
+  },
+  "financial_services": {
+    "title": "Financial Services Risk Intelligence Demo",
+    "business_problem": "Risk assessment limited by data silos and delayed insights",
+    "roi_calculation": {
+      "risk_detection_speed": "From 48 hours to 15 minutes (99% faster)",
+      "fraud_prevention": "$3.8M prevented losses through early detection",
+      "compliance_efficiency": "67% reduction in regulatory reporting time",
+      "customer_insights": "360-degree view improving retention by 23%"
+    },
+    "data_sources": {
+      "risk_metrics": [
+        {
+          "date": "2025-07-12",
+          "risk_category": "credit_risk",
+          "risk_score": 0.1717,
+          "risk_level": "low",
+          "market_volatility_factor": 0.933,
+          "portfolio_exposure": 9274984,
+          "mitigation_actions": 2
+        },
+        {
+          "date": "2025-07-13",
+          "risk_category": "credit_risk",
+          "risk_score": 0.3122,
+          "risk_level": "low",
+          "market_volatility_factor": 0.975,
+          "portfolio_exposure": 4080216,
+          "mitigation_actions": 2
+        },
+        {
+          "date": "2025-07-14",
+          "risk_category": "credit_risk",
+          "risk_score": 0.1791,
+          "risk_level": "low",
+          "market_volatility_factor": 0.805,
+          "portfolio_exposure": 4056185,
+          "mitigation_actions": 3
+        },
+        {
+          "date": "2025-07-15",
+          "risk_category": "credit_risk",
+          "risk_score": 0.3072,
+          "risk_level": "low",
+          "market_volatility_factor": 0.916,
+          "portfolio_exposure": 3799718,
+          "mitigation_actions": 4
+        },
+        {
+          "date": "2025-07-16",
+          "risk_category": "credit_risk",
+          "risk_score": 0.3805,
+          "risk_level": "low",
+          "market_volatility_factor": 1.255,
+          "portfolio_exposure": 9699879,
+          "mitigation_actions": 1
+        },
+        {
+          "date": "2025-07-17",
+          "risk_category": "credit_risk",
+          "risk_score": 0.278,
+          "risk_level": "low",
+          "market_volatility_factor": 0.826,
+          "portfolio_exposure": 8927056,
+          "mitigation_actions": 3
+        },
+        {
+          "date": "2025-07-18",
+          "risk_category": "credit_risk",
+          "risk_score": 0.4361,
+          "risk_level": "medium",
+          "market_volatility_factor": 1.138,
+          "portfolio_exposure": 2533056,
+          "mitigation_actions": 0
+        },
+        {
+          "date": "2025-07-12",
+          "risk_category": "market_risk",
+          "risk_score": 0.3578,
+          "risk_level": "low",
+          "market_volatility_factor": 1.034,
+          "portfolio_exposure": 2866499,
+          "mitigation_actions": 1
+        },
+        {
+          "date": "2025-07-13",
+          "risk_category": "market_risk",
+          "risk_score": 0.4506,
+          "risk_level": "medium",
+          "market_volatility_factor": 1.198,
+          "portfolio_exposure": 6834159,
+          "mitigation_actions": 2
+        },
+        {
+          "date": "2025-07-14",
+          "risk_category": "market_risk",
+          "risk_score": 0.3254,
+          "risk_level": "low",
+          "market_volatility_factor": 1.227,
+          "portfolio_exposure": 8149159,
+          "mitigation_actions": 0
+        },
+        {
+          "date": "2025-07-15",
+          "risk_category": "market_risk",
+          "risk_score": 0.35,
+          "risk_level": "low",
+          "market_volatility_factor": 1.291,
+          "portfolio_exposure": 9437959,
+          "mitigation_actions": 3
+        },
+        {
+          "date": "2025-07-16",
+          "risk_category": "market_risk",
+          "risk_score": 0.124,
+          "risk_level": "low",
+          "market_volatility_factor": 1.147,
+          "portfolio_exposure": 4011016,
+          "mitigation_actions": 2
+        },
+        {
+          "date": "2025-07-17",
+          "risk_category": "market_risk",
+          "risk_score": 0.1993,
+          "risk_level": "low",
+          "market_volatility_factor": 0.847,
+          "portfolio_exposure": 5314960,
+          "mitigation_actions": 3
+        },
+        {
+          "date": "2025-07-18",
+          "risk_category": "market_risk",
+          "risk_score": 0.2294,
+          "risk_level": "low",
+          "market_volatility_factor": 0.869,
+          "portfolio_exposure": 6903605,
+          "mitigation_actions": 0
+        },
+        {
+          "date": "2025-07-12",
+          "risk_category": "operational_risk",
+          "risk_score": 0.1195,
+          "risk_level": "low",
+          "market_volatility_factor": 0.91,
+          "portfolio_exposure": 6630951,
+          "mitigation_actions": 4
+        }
+      ],
+      "customer_transactions": [
+        {
+          "transaction_id": "TXN-731781",
+          "customer_id": "CUST-1154",
+          "transaction_type": "withdrawal",
+          "amount": 12640.25,
+          "timestamp": "2025-07-16T06:49:24.319224",
+          "is_suspicious": false,
+          "risk_score": 0.0572,
+          "geographic_risk": "high",
+          "fraud_probability": 0.0503
+        },
+        {
+          "transaction_id": "TXN-119017",
+          "customer_id": "CUST-3321",
+          "transaction_type": "investment",
+          "amount": 26657.09,
+          "timestamp": "2025-07-14T19:49:24.319232",
+          "is_suspicious": false,
+          "risk_score": 0.0615,
+          "geographic_risk": "low",
+          "fraud_probability": 0.1784
+        },
+        {
+          "transaction_id": "TXN-423654",
+          "customer_id": "CUST-8693",
+          "transaction_type": "payment",
+          "amount": 27511.9,
+          "timestamp": "2025-07-14T09:49:24.319236",
+          "is_suspicious": false,
+          "risk_score": 0.1197,
+          "geographic_risk": "high",
+          "fraud_probability": 0.0159
+        },
+        {
+          "transaction_id": "TXN-599979",
+          "customer_id": "CUST-7850",
+          "transaction_type": "deposit",
+          "amount": 16930.44,
+          "timestamp": "2025-07-13T17:49:24.319241",
+          "is_suspicious": false,
+          "risk_score": 0.1414,
+          "geographic_risk": "high",
+          "fraud_probability": 0.0702
+        },
+        {
+          "transaction_id": "TXN-491346",
+          "customer_id": "CUST-9154",
+          "transaction_type": "investment",
+          "amount": 19399.0,
+          "timestamp": "2025-07-18T00:49:24.319246",
+          "is_suspicious": false,
+          "risk_score": 0.2443,
+          "geographic_risk": "high",
+          "fraud_probability": 0.1347
+        },
+        {
+          "transaction_id": "TXN-198719",
+          "customer_id": "CUST-3548",
+          "transaction_type": "transfer",
+          "amount": 32528.22,
+          "timestamp": "2025-07-14T13:49:24.319250",
+          "is_suspicious": false,
+          "risk_score": 0.1962,
+          "geographic_risk": "medium",
+          "fraud_probability": 0.004
+        },
+        {
+          "transaction_id": "TXN-424605",
+          "customer_id": "CUST-2080",
+          "transaction_type": "deposit",
+          "amount": 48291.77,
+          "timestamp": "2025-07-15T23:49:24.319254",
+          "is_suspicious": false,
+          "risk_score": 0.1267,
+          "geographic_risk": "medium",
+          "fraud_probability": 0.087
+        },
+        {
+          "transaction_id": "TXN-826417",
+          "customer_id": "CUST-6963",
+          "transaction_type": "deposit",
+          "amount": 7233.49,
+          "timestamp": "2025-07-13T02:49:24.319258",
+          "is_suspicious": false,
+          "risk_score": 0.1333,
+          "geographic_risk": "high",
+          "fraud_probability": 0.0252
+        },
+        {
+          "transaction_id": "TXN-280536",
+          "customer_id": "CUST-7947",
+          "transaction_type": "investment",
+          "amount": 41071.39,
+          "timestamp": "2025-07-13T00:49:24.319262",
+          "is_suspicious": false,
+          "risk_score": 0.0953,
+          "geographic_risk": "low",
+          "fraud_probability": 0.1044
+        },
+        {
+          "transaction_id": "TXN-665209",
+          "customer_id": "CUST-2766",
+          "transaction_type": "withdrawal",
+          "amount": 10618.47,
+          "timestamp": "2025-07-15T06:49:24.319266",
+          "is_suspicious": false,
+          "risk_score": 0.0765,
+          "geographic_risk": "medium",
+          "fraud_probability": 0.047
+        },
+        {
+          "transaction_id": "TXN-764859",
+          "customer_id": "CUST-2467",
+          "transaction_type": "transfer",
+          "amount": 49242.54,
+          "timestamp": "2025-07-19T18:49:24.319269",
+          "is_suspicious": false,
+          "risk_score": 0.0338,
+          "geographic_risk": "high",
+          "fraud_probability": 0.0842
+        },
+        {
+          "transaction_id": "TXN-276812",
+          "customer_id": "CUST-6042",
+          "transaction_type": "withdrawal",
+          "amount": 27811.36,
+          "timestamp": "2025-07-16T20:49:24.319273",
+          "is_suspicious": false,
+          "risk_score": 0.2067,
+          "geographic_risk": "low",
+          "fraud_probability": 0.1875
+        },
+        {
+          "transaction_id": "TXN-467757",
+          "customer_id": "CUST-8236",
+          "transaction_type": "payment",
+          "amount": 23694.12,
+          "timestamp": "2025-07-18T23:49:24.319277",
+          "is_suspicious": false,
+          "risk_score": 0.2978,
+          "geographic_risk": "low",
+          "fraud_probability": 0.0527
+        },
+        {
+          "transaction_id": "TXN-721955",
+          "customer_id": "CUST-8437",
+          "transaction_type": "payment",
+          "amount": 4199.33,
+          "timestamp": "2025-07-17T23:49:24.319281",
+          "is_suspicious": false,
+          "risk_score": 0.2889,
+          "geographic_risk": "medium",
+          "fraud_probability": 0.1203
+        },
+        {
+          "transaction_id": "TXN-659699",
+          "customer_id": "CUST-3560",
+          "transaction_type": "investment",
+          "amount": 12751.91,
+          "timestamp": "2025-07-14T07:49:24.319284",
+          "is_suspicious": false,
+          "risk_score": 0.1503,
+          "geographic_risk": "low",
+          "fraud_probability": 0.0786
+        },
+        {
+          "transaction_id": "TXN-570780",
+          "customer_id": "CUST-8427",
+          "transaction_type": "deposit",
+          "amount": 3916.75,
+          "timestamp": "2025-07-14T21:49:24.319288",
+          "is_suspicious": false,
+          "risk_score": 0.0366,
+          "geographic_risk": "low",
+          "fraud_probability": 0.1725
+        },
+        {
+          "transaction_id": "TXN-932960",
+          "customer_id": "CUST-4080",
+          "transaction_type": "payment",
+          "amount": 48350.25,
+          "timestamp": "2025-07-13T12:49:24.319292",
+          "is_suspicious": false,
+          "risk_score": 0.2854,
+          "geographic_risk": "medium",
+          "fraud_probability": 0.1341
+        },
+        {
+          "transaction_id": "TXN-277359",
+          "customer_id": "CUST-9895",
+          "transaction_type": "investment",
+          "amount": 18685.2,
+          "timestamp": "2025-07-18T02:49:24.319296",
+          "is_suspicious": false,
+          "risk_score": 0.1612,
+          "geographic_risk": "medium",
+          "fraud_probability": 0.1706
+        },
+        {
+          "transaction_id": "TXN-113413",
+          "customer_id": "CUST-1208",
+          "transaction_type": "investment",
+          "amount": 43167.51,
+          "timestamp": "2025-07-14T06:49:24.319299",
+          "is_suspicious": false,
+          "risk_score": 0.049,
+          "geographic_risk": "low",
+          "fraud_probability": 0.0778
+        },
+        {
+          "transaction_id": "TXN-720923",
+          "customer_id": "CUST-4690",
+          "transaction_type": "deposit",
+          "amount": 19671.11,
+          "timestamp": "2025-07-16T09:49:24.319303",
+          "is_suspicious": false,
+          "risk_score": 0.1249,
+          "geographic_risk": "low",
+          "fraud_probability": 0.0993
+        },
+        {
+          "transaction_id": "TXN-664255",
+          "customer_id": "CUST-8302",
+          "transaction_type": "transfer",
+          "amount": 30334.19,
+          "timestamp": "2025-07-16T19:49:24.319307",
+          "is_suspicious": false,
+          "risk_score": 0.1869,
+          "geographic_risk": "high",
+          "fraud_probability": 0.0564
+        },
+        {
+          "transaction_id": "TXN-729030",
+          "customer_id": "CUST-5362",
+          "transaction_type": "deposit",
+          "amount": 26118.73,
+          "timestamp": "2025-07-16T05:49:24.319310",
+          "is_suspicious": false,
+          "risk_score": 0.12,
+          "geographic_risk": "high",
+          "fraud_probability": 0.1915
+        },
+        {
+          "transaction_id": "TXN-640003",
+          "customer_id": "CUST-7234",
+          "transaction_type": "investment",
+          "amount": 15573.56,
+          "timestamp": "2025-07-15T19:49:24.319314",
+          "is_suspicious": false,
+          "risk_score": 0.0793,
+          "geographic_risk": "medium",
+          "fraud_probability": 0.0306
+        },
+        {
+          "transaction_id": "TXN-997750",
+          "customer_id": "CUST-4307",
+          "transaction_type": "investment",
+          "amount": 49467.54,
+          "timestamp": "2025-07-16T10:49:24.319317",
+          "is_suspicious": false,
+          "risk_score": 0.1756,
+          "geographic_risk": "low",
+          "fraud_probability": 0.0147
+        },
+        {
+          "transaction_id": "TXN-798344",
+          "customer_id": "CUST-6468",
+          "transaction_type": "payment",
+          "amount": 2860.82,
+          "timestamp": "2025-07-17T02:49:24.319321",
+          "is_suspicious": false,
+          "risk_score": 0.1021,
+          "geographic_risk": "high",
+          "fraud_probability": 0.1189
+        }
+      ],
+      "market_conditions": [
+        {
+          "date": "2025-06-19",
+          "indicator": "S&P_500",
+          "value": 4414.3655,
+          "daily_change_percent": -2.252,
+          "volatility_index": 1.046
+        },
+        {
+          "date": "2025-06-19",
+          "indicator": "VIX",
+          "value": 20.9156,
+          "daily_change_percent": 0.08,
+          "volatility_index": 1.046
+        },
+        {
+          "date": "2025-06-19",
+          "indicator": "USD_EUR",
+          "value": 1.1351,
+          "daily_change_percent": -1.206,
+          "volatility_index": 1.046
+        },
+        {
+          "date": "2025-06-19",
+          "indicator": "10Y_Treasury",
+          "value": 4.7841,
+          "daily_change_percent": 0.096,
+          "volatility_index": 1.046
+        },
+        {
+          "date": "2025-06-19",
+          "indicator": "Gold_Price",
+          "value": 2107.8902,
+          "daily_change_percent": -0.423,
+          "volatility_index": 1.046
+        },
+        {
+          "date": "2025-06-20",
+          "indicator": "S&P_500",
+          "value": 4197.4043,
+          "daily_change_percent": 2.296,
+          "volatility_index": 0.985
+        },
+        {
+          "date": "2025-06-20",
+          "indicator": "VIX",
+          "value": 19.5899,
+          "daily_change_percent": -2.012,
+          "volatility_index": 0.985
+        },
+        {
+          "date": "2025-06-20",
+          "indicator": "USD_EUR",
+          "value": 1.0633,
+          "daily_change_percent": -2.464,
+          "volatility_index": 0.985
+        },
+        {
+          "date": "2025-06-20",
+          "indicator": "10Y_Treasury",
+          "value": 4.3911,
+          "daily_change_percent": -2.31,
+          "volatility_index": 0.985
+        },
+        {
+          "date": "2025-06-20",
+          "indicator": "Gold_Price",
+          "value": 1957.3232,
+          "daily_change_percent": 2.33,
+          "volatility_index": 0.985
+        },
+        {
+          "date": "2025-06-21",
+          "indicator": "S&P_500",
+          "value": 4310.9796,
+          "daily_change_percent": 2.204,
+          "volatility_index": 1.036
+        },
+        {
+          "date": "2025-06-21",
+          "indicator": "VIX",
+          "value": 20.6848,
+          "daily_change_percent": 1.28,
+          "volatility_index": 1.036
+        },
+        {
+          "date": "2025-06-21",
+          "indicator": "USD_EUR",
+          "value": 1.1085,
+          "daily_change_percent": -0.035,
+          "volatility_index": 1.036
+        },
+        {
+          "date": "2025-06-21",
+          "indicator": "10Y_Treasury",
+          "value": 4.5751,
+          "daily_change_percent": -2.249,
+          "volatility_index": 1.036
+        },
+        {
+          "date": "2025-06-21",
+          "indicator": "Gold_Price",
+          "value": 2056.3958,
+          "daily_change_percent": 0.848,
+          "volatility_index": 1.036
+        },
+        {
+          "date": "2025-06-22",
+          "indicator": "S&P_500",
+          "value": 4517.5137,
+          "daily_change_percent": -0.93,
+          "volatility_index": 1.059
+        },
+        {
+          "date": "2025-06-22",
+          "indicator": "VIX",
+          "value": 21.0826,
+          "daily_change_percent": -2.232,
+          "volatility_index": 1.059
+        },
+        {
+          "date": "2025-06-22",
+          "indicator": "USD_EUR",
+          "value": 1.1255,
+          "daily_change_percent": 0.571,
+          "volatility_index": 1.059
+        },
+        {
+          "date": "2025-06-22",
+          "indicator": "10Y_Treasury",
+          "value": 4.8448,
+          "daily_change_percent": 0.521,
+          "volatility_index": 1.059
+        },
+        {
+          "date": "2025-06-22",
+          "indicator": "Gold_Price",
+          "value": 2157.9815,
+          "daily_change_percent": -1.352,
+          "volatility_index": 1.059
+        },
+        {
+          "date": "2025-06-23",
+          "indicator": "S&P_500",
+          "value": 4302.3725,
+          "daily_change_percent": 0.438,
+          "volatility_index": 1.007
+        },
+        {
+          "date": "2025-06-23",
+          "indicator": "VIX",
+          "value": 20.064,
+          "daily_change_percent": 1.351,
+          "volatility_index": 1.007
+        },
+        {
+          "date": "2025-06-23",
+          "indicator": "USD_EUR",
+          "value": 1.0755,
+          "daily_change_percent": 0.81,
+          "volatility_index": 1.007
+        },
+        {
+          "date": "2025-06-23",
+          "indicator": "10Y_Treasury",
+          "value": 4.5315,
+          "daily_change_percent": -0.265,
+          "volatility_index": 1.007
+        },
+        {
+          "date": "2025-06-23",
+          "indicator": "Gold_Price",
+          "value": 2053.9783,
+          "daily_change_percent": -0.049,
+          "volatility_index": 1.007
+        }
+      ],
+      "regulatory_requirements": [
+        {
+          "regulation": "GDPR",
+          "compliance_score": 0.9118,
+          "last_audit_date": "2024-08-04",
+          "findings_count": 7,
+          "critical_findings": 2,
+          "remediation_status": "in_progress",
+          "next_review_date": "2025-11-13"
+        },
+        {
+          "regulation": "CCPA",
+          "compliance_score": 0.8928,
+          "last_audit_date": "2024-12-21",
+          "findings_count": 3,
+          "critical_findings": 2,
+          "remediation_status": "complete",
+          "next_review_date": "2025-08-26"
+        },
+        {
+          "regulation": "SOX",
+          "compliance_score": 0.9028,
+          "last_audit_date": "2025-05-29",
+          "findings_count": 2,
+          "critical_findings": 2,
+          "remediation_status": "pending",
+          "next_review_date": "2025-12-31"
+        },
+        {
+          "regulation": "Basel_III",
+          "compliance_score": 0.9451,
+          "last_audit_date": "2024-11-15",
+          "findings_count": 2,
+          "critical_findings": 1,
+          "remediation_status": "complete",
+          "next_review_date": "2025-08-27"
+        },
+        {
+          "regulation": "MiFID_II",
+          "compliance_score": 0.9012,
+          "last_audit_date": "2025-03-06",
+          "findings_count": 2,
+          "critical_findings": 1,
+          "remediation_status": "pending",
+          "next_review_date": "2025-12-16"
+        }
+      ]
+    },
+    "key_insights": [
+      {
+        "insight": "Real-time Fraud Pattern Detection",
+        "description": "Cross-account transaction patterns identify fraud rings within minutes",
+        "business_impact": "$3.8M in prevented losses, 94% accuracy rate",
+        "correlation_strength": 0.91,
+        "p_value": 1e-07,
+        "sample_size": 45000
+      },
+      {
+        "insight": "Market Risk Early Warning",
+        "description": "Client portfolio correlations with market volatility predict risk exposure",
+        "business_impact": "Proactive risk management prevented $12M in client losses",
+        "correlation_strength": 0.78,
+        "p_value": 3.4e-06,
+        "sample_size": 18500
+      },
+      {
+        "insight": "Customer Lifetime Value Prediction",
+        "description": "Transaction patterns and life events predict customer profitability",
+        "business_impact": "Personalized services increased customer retention by 23%",
+        "correlation_strength": 0.65,
+        "p_value": 0.0002,
+        "sample_size": 35000
+      }
+    ],
+    "demo_flow": [
+      "Display real-time risk dashboard with market correlations",
+      "Show fraud detection system catching suspicious patterns",
+      "Demonstrate regulatory compliance automation",
+      "Navigate customer 360-degree view and insights",
+      "Calculate risk-adjusted returns and compliance savings"
+    ]
+  },
+  "cross_domain_insights": {
+    "title": "Cross-Domain Intelligence Discovery",
+    "description": "Unique insights only possible through unified data platform",
+    "insights": [
+      {
+        "domains": [
+          "weather",
+          "sales",
+          "social_media"
+        ],
+        "insight": "Rainy Day Social Commerce Correlation",
+        "description": "Social media engagement increases 34% on rainy days, driving 28% higher online sales in comfort products",
+        "business_application": "Weather-triggered social media campaigns and inventory positioning"
+      },
+      {
+        "domains": [
+          "supply_chain",
+          "market_news",
+          "customer_behavior"
+        ],
+        "insight": "Supply Disruption Demand Prediction",
+        "description": "News sentiment about supply chain issues predicts customer hoarding behavior 72 hours in advance",
+        "business_application": "Proactive inventory management and dynamic pricing strategies"
+      },
+      {
+        "domains": [
+          "employee_productivity",
+          "customer_satisfaction",
+          "financial_performance"
+        ],
+        "insight": "Human Capital ROI Correlation",
+        "description": "Employee satisfaction scores correlate with customer satisfaction (r=0.73) and revenue per customer (r=0.68)",
+        "business_application": "Employee investment directly tied to customer and financial outcomes"
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: shared_core
+Version: 0.1.0
+Summary: Shared core components for Data Centralization Platform
+Requires-Python: >=3.9
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: openai
+Requires-Dist: pydantic
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary

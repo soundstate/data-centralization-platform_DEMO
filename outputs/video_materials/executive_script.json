@@ -1,0 +1,80 @@
+{
+  "executive_video_script": {
+    "title": "Data Centralization Platform - Executive Overview",
+    "duration": "5 minutes",
+    "target_audience": "C-level executives, VPs, decision makers",
+    "scenes": [
+      {
+        "scene": 1,
+        "duration": "30 seconds",
+        "title": "Hook & Problem Statement",
+        "visual": "Split screen showing chaotic dashboards vs clean unified view",
+        "script": "Every day, your organization generates massive amounts of valuable data. But it's trapped in silos - your CRM, ERP, marketing platforms, and dozens of other systems. While your competitors discover game-changing insights, your teams spend weeks just trying to find the data they need.",
+        "key_points": [
+          "Data silos are costing opportunities",
+          "Competitors are moving faster",
+          "Teams waste time on data hunting"
+        ]
+      },
+      {
+        "scene": 2,
+        "duration": "60 seconds",
+        "title": "Solution Introduction",
+        "visual": "Platform interface with real-time correlations appearing",
+        "script": "Meet the Data Centralization Platform - an AI-powered solution that automatically connects all your data sources and discovers hidden correlations in real-time. Watch as our system identifies relationships your analysts would never find manually. Here, we're seeing a 73% correlation between weather patterns and product sales - an insight worth hundreds of thousands in revenue optimization.",
+        "key_points": [
+          "AI-powered automatic correlation discovery",
+          "Real-time insights from all data sources",
+          "Finds relationships humans miss",
+          "Immediate business value"
+        ]
+      },
+      {
+        "scene": 3,
+        "duration": "90 seconds",
+        "title": "Business Impact Demonstration",
+        "visual": "ROI charts, before/after comparisons, success metrics",
+        "script": "The results speak for themselves. Companies using our platform see 481% ROI in the first year. Decision-making speed increases by 10x - from weeks to hours. And here's the key differentiator: our AI discovers 10 times more correlations than traditional analysis. This manufacturing client saved $2.1 million annually by predicting equipment failures 72 hours in advance. This retailer increased revenue by $425,000 by optimizing inventory based on weather correlations.",
+        "key_points": [
+          "481% first-year ROI",
+          "10x faster decisions",
+          "10x more insights discovered",
+          "Real client success stories"
+        ]
+      },
+      {
+        "scene": 4,
+        "duration": "60 seconds",
+        "title": "Ease of Implementation",
+        "visual": "Timeline animation showing rapid deployment",
+        "script": "Unlike traditional BI solutions that take months to implement, our platform can be running in your pilot department within 2-3 weeks. No massive IT overhaul required. No data migration headaches. We connect to your existing systems through APIs, and our AI immediately starts finding insights. Your team gets results on day one, not month twelve.",
+        "key_points": [
+          "2-3 week implementation for pilot",
+          "No IT overhaul required",
+          "Connects to existing systems",
+          "Immediate results"
+        ]
+      },
+      {
+        "scene": 5,
+        "duration": "40 seconds",
+        "title": "Call to Action",
+        "visual": "Contact information and next steps",
+        "script": "The question isn't whether your organization has valuable hidden insights - it's whether you'll discover them before your competitors do. Let's schedule a 15-minute demo tailored to your specific industry and use cases. I'll show you exactly what correlations exist in your data that you don't know about yet. Contact us today - your competitive advantage is waiting to be discovered.",
+        "key_points": [
+          "Competitive urgency",
+          "Personalized demo offer",
+          "Immediate discovery promise",
+          "Clear call to action"
+        ]
+      }
+    ],
+    "production_notes": {
+      "pacing": "Energetic but professional - build excitement about possibilities",
+      "visuals": "Heavy emphasis on live platform demonstrations and real results",
+      "tone": "Confident, results-oriented, slightly urgent about competitive advantage",
+      "transitions": "Smooth cuts between talking head and screen recordings",
+      "graphics": "Professional lower thirds, animated ROI charts, company logos"
+    }
+  }
+}

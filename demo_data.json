@@ -1,0 +1,233 @@
+{
+  "music": {
+    "artists": [
+      {
+        "id": "uuid-1",
+        "spotify_id": "4gzpq5DPGxSnKTe4SA8HAU",
+        "name": "Coldplay",
+        "genres": [
+          "alternative rock",
+          "british rock"
+        ],
+        "popularity": 88,
+        "followers": 45123456
+      },
+      {
+        "id": "uuid-2",
+        "spotify_id": "06HL4z0CvFAxyc27GXpf02",
+        "name": "Taylor Swift",
+        "genres": [
+          "pop",
+          "country pop",
+          "indie folk"
+        ],
+        "popularity": 100,
+        "followers": 78654321
+      },
+      {
+        "id": "uuid-3",
+        "spotify_id": "3WrFJ7ztbogyGnTHbHJFl2",
+        "name": "The Beatles",
+        "genres": [
+          "rock",
+          "british invasion"
+        ],
+        "popularity": 85,
+        "followers": 23456789
+      }
+    ],
+    "tracks": [
+      {
+        "id": "uuid-track-1",
+        "name": "Hymn for the Weekend",
+        "artist": "Coldplay",
+        "isrc_code": "GBAHS1500642",
+        "duration_ms": 258266,
+        "popularity": 82,
+        "audio_features": {
+          "danceability": 0.748,
+          "energy": 0.652,
+          "valence": 0.825,
+          "tempo": 90.034
+        }
+      },
+      {
+        "id": "uuid-track-2",
+        "name": "the 1",
+        "artist": "Taylor Swift",
+        "isrc_code": "USRC17607839",
+        "duration_ms": 210829,
+        "popularity": 77,
+        "audio_features": {
+          "danceability": 0.555,
+          "energy": 0.425,
+          "valence": 0.289,
+          "tempo": 120.045
+        }
+      }
+    ]
+  },
+  "entertainment": {
+    "movies": [
+      {
+        "id": "uuid-movie-1",
+        "tmdb_id": 284053,
+        "title": "Thor: Ragnarok",
+        "release_date": "2017-11-03",
+        "runtime": 130,
+        "budget": 180000000,
+        "revenue": 854000000,
+        "genres": [
+          "action",
+          "adventure",
+          "comedy"
+        ],
+        "soundtrack_isrc_codes": [
+          "GBAHS1500642"
+        ]
+      },
+      {
+        "id": "uuid-movie-2",
+        "tmdb_id": 508442,
+        "title": "Soul",
+        "release_date": "2020-12-25",
+        "runtime": 100,
+        "budget": 150000000,
+        "revenue": 121000000,
+        "genres": [
+          "animation",
+          "family"
+        ],
+        "soundtrack_isrc_codes": [
+          "USRC17607839"
+        ]
+      }
+    ]
+  },
+  "weather": {
+    "locations": [
+      {
+        "id": "uuid-loc-1",
+        "name": "New York City",
+        "country": "United States",
+        "latitude": 40.7128,
+        "longitude": -74.006
+      },
+      {
+        "id": "uuid-loc-2",
+        "name": "Los Angeles",
+        "country": "United States",
+        "latitude": 34.0522,
+        "longitude": -118.2437
+      },
+      {
+        "id": "uuid-loc-3",
+        "name": "London",
+        "country": "United Kingdom",
+        "latitude": 51.5074,
+        "longitude": -0.1278
+      }
+    ],
+    "current_weather": [
+      {
+        "location": "New York City",
+        "temperature": 22.5,
+        "humidity": 65,
+        "condition": "clear"
+      },
+      {
+        "location": "Los Angeles",
+        "temperature": 15.8,
+        "humidity": 85,
+        "condition": "rain"
+      },
+      {
+        "location": "London",
+        "temperature": 18.2,
+        "humidity": 75,
+        "condition": "clouds"
+      }
+    ]
+  },
+  "gaming": {
+    "pokemon": [
+      {
+        "id": "uuid-poke-1",
+        "pokemon_id": 25,
+        "name": "pikachu",
+        "types": [
+          "electric"
+        ],
+        "base_experience": 112
+      },
+      {
+        "id": "uuid-poke-2",
+        "pokemon_id": 6,
+        "name": "charizard",
+        "types": [
+          "fire",
+          "flying"
+        ],
+        "base_experience": 267
+      }
+    ]
+  },
+  "development": {
+    "repositories": [
+      {
+        "id": "uuid-repo-1",
+        "name": "react",
+        "full_name": "facebook/react",
+        "language": "JavaScript",
+        "stargazers_count": 215000
+      },
+      {
+        "id": "uuid-repo-2",
+        "name": "tensorflow",
+        "full_name": "tensorflow/tensorflow",
+        "language": "C++",
+        "stargazers_count": 185000
+      }
+    ]
+  },
+  "productivity": {
+    "notion_pages": [
+      {
+        "id": "uuid-page-1",
+        "title": "Project Planning Template",
+        "content_preview": "This is a comprehensive project planning template..."
+      },
+      {
+        "id": "uuid-page-2",
+        "title": "Meeting Notes - Q1 Review",
+        "content_preview": "Quarterly review meeting notes covering performance metrics..."
+      }
+    ]
+  },
+  "correlations": [
+    {
+      "domain1": "weather",
+      "domain2": "music",
+      "variable1": "temperature",
+      "variable2": "valence",
+      "correlation": 0.342,
+      "p_value": 0.0234,
+      "significant": true
+    },
+    {
+      "domain1": "entertainment",
+      "domain2": "music",
+      "variable1": "box_office",
+      "variable2": "soundtrack_popularity",
+      "correlation": 0.567,
+      "p_value": 0.0012,
+      "significant": true
+    }
+  ],
+  "metadata": {
+    "total_records": 21,
+    "domains": 6,
+    "generated_at": "2025-07-19T21:35:12.860163",
+    "version": "1.0.0"
+  }
+}

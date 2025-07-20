@@ -1,0 +1,104 @@
+{
+  "video_editing_guide": {
+    "overview": "Professional post-production workflow for demo videos",
+    "software_recommendations": {
+      "free_options": {
+        "davinci_resolve": "Professional-grade color correction and editing",
+        "obs_studio": "Best free screen recording with multiple scenes",
+        "audacity": "Audio editing and noise reduction"
+      },
+      "paid_options": {
+        "adobe_premiere_pro": "Industry standard video editing",
+        "final_cut_pro": "Mac-optimized professional editing",
+        "camtasia": "Specialized for screen recordings and tutorials"
+      }
+    },
+    "editing_workflow": [
+      {
+        "stage": "Raw Footage Review",
+        "tasks": [
+          "Review all recorded segments",
+          "Identify best takes for each section",
+          "Note timing and pacing issues",
+          "Check audio quality throughout"
+        ]
+      },
+      {
+        "stage": "Assembly Edit",
+        "tasks": [
+          "Create rough cut following script timing",
+          "Add basic transitions between segments",
+          "Sync audio and video tracks",
+          "Remove obvious mistakes and long pauses"
+        ]
+      },
+      {
+        "stage": "Fine Cut",
+        "tasks": [
+          "Refine pacing and timing",
+          "Add smooth transitions and effects",
+          "Color correct screen recordings for consistency",
+          "Balance audio levels throughout"
+        ]
+      },
+      {
+        "stage": "Graphics and Titles",
+        "tasks": [
+          "Add professional title sequences",
+          "Create lower thirds for key points",
+          "Add callout annotations for important features",
+          "Include company branding elements"
+        ]
+      },
+      {
+        "stage": "Audio Post-Production",
+        "tasks": [
+          "Remove background noise and room tone",
+          "Add background music at appropriate levels",
+          "Create smooth audio transitions",
+          "Add sound effects for UI interactions"
+        ]
+      },
+      {
+        "stage": "Final Output",
+        "tasks": [
+          "Export in multiple formats (1080p, 720p)",
+          "Create thumbnails for each video",
+          "Generate captions/subtitles",
+          "Optimize file sizes for different platforms"
+        ]
+      }
+    ],
+    "technical_specifications": {
+      "export_settings": {
+        "format": "MP4 (H.264)",
+        "resolution": "1920x1080 for primary, 1280x720 for backup",
+        "frame_rate": "30 fps",
+        "bitrate": "8-10 Mbps for high quality",
+        "audio": "AAC 44.1kHz"
+      },
+      "quality_checklist": [
+        "No audio dropouts or distortion",
+        "Consistent color and exposure",
+        "Smooth transitions without jarring cuts",
+        "Readable text at target viewing size",
+        "Professional audio levels (-12dB average)",
+        "No dead air longer than 2 seconds"
+      ]
+    },
+    "branding_elements": {
+      "visual_identity": [
+        "Consistent color scheme (#FF6B6B, #4ECDC4, #45B7D1)",
+        "Professional fonts (Arial/Helvetica for readability)",
+        "Company logo in bottom right corner",
+        "Consistent lower third design"
+      ],
+      "messaging": [
+        "AI-powered correlation discovery",
+        "Real-time business insights",
+        "Enterprise-ready scalability",
+        "Rapid implementation"
+      ]
+    }
+  }
+}

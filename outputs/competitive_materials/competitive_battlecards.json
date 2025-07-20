@@ -1,0 +1,59 @@
+{
+  "competitive_battlecards": {
+    "vs_tableau": {
+      "when_they_say": "We're already using Tableau for visualization",
+      "our_response": "Tableau is excellent for visualizing known relationships. Our platform discovers the relationships Tableau can't see - like the correlation between weather and sales that generated $180k in new revenue for our retail client. We complement Tableau by feeding it the insights it needs to create truly impactful dashboards.",
+      "competitive_advantages": [
+        "Automatic correlation discovery vs. manual dashboard creation",
+        "Cross-domain analysis vs. single data source visualization",
+        "Real-time AI insights vs. static reporting",
+        "2-week implementation vs. 3-6 month rollouts"
+      ],
+      "differentiation_demo": "Show live correlation discovery across multiple data sources while Tableau requires pre-built data models"
+    },
+    "vs_power_bi": {
+      "when_they_say": "Power BI is cost-effective and integrates with Microsoft",
+      "our_response": "Power BI is great for basic reporting within the Microsoft ecosystem. But can it tell you why your sales dropped 15% last quarter when nothing obvious changed? Our AI discovered a client's inventory delays correlated with customer satisfaction scores - a $300k insight Power BI would never find because it doesn't look across domains.",
+      "competitive_advantages": [
+        "AI-powered insight discovery vs. manual report building",
+        "Works with any data source vs. Microsoft ecosystem bias",
+        "Natural language queries vs. technical formula building",
+        "Predictive analytics vs. historical reporting"
+      ],
+      "differentiation_demo": "Ask complex business questions in natural language and get immediate answers with statistical significance"
+    },
+    "vs_sisense": {
+      "when_they_say": "Sisense has AI capabilities and easy data preparation",
+      "our_response": "Sisense focuses on making existing analytics easier. We focus on finding insights that don't exist yet. When our manufacturing client's quality team couldn't figure out why defects spiked randomly, our AI discovered the correlation with supplier delivery timing - something Sisense's AI missed because it was looking at quality data in isolation.",
+      "competitive_advantages": [
+        "Cross-domain correlation discovery vs. single-domain AI",
+        "Automatic statistical significance testing vs. basic pattern recognition",
+        "Real-time streaming analysis vs. batch processing focus",
+        "Transparent pricing vs. enterprise-only high minimums"
+      ],
+      "differentiation_demo": "Show correlations discovered across completely different data domains that traditional AI would never find"
+    },
+    "vs_datarobot": {
+      "when_they_say": "DataRobot provides enterprise-grade automated ML",
+      "our_response": "DataRobot excels at building predictive models when you know what you're trying to predict. But what about the insights you don't know to look for? Our platform discovered that customer service ticket patterns predict product reviews 48 hours in advance - an insight that led to $85k in retained revenue. DataRobot requires you to hypothesize relationships; we discover them automatically.",
+      "competitive_advantages": [
+        "Hypothesis-free discovery vs. targeted model building",
+        "Business user interface vs. data scientist requirements",
+        "Cross-domain insights vs. single-use-case models",
+        "Weeks to value vs. months of model development"
+      ],
+      "differentiation_demo": "Show business users getting insights without any technical knowledge or model building"
+    },
+    "vs_custom_development": {
+      "when_they_say": "We're building our own analytics solution internally",
+      "our_response": "Custom development gives you complete control, but at what cost? Our manufacturing client spent 18 months and $2M building custom analytics before switching to our platform. In 3 weeks, we discovered insights their custom system missed and delivered $2.1M in annual savings. The question is: do you want to build analytics, or do you want to get insights?",
+      "competitive_advantages": [
+        "Proven ROI vs. uncertain development outcomes",
+        "Immediate time-to-value vs. years of development",
+        "Continuous AI improvements vs. static custom code",
+        "Full support and maintenance vs. internal resource drain"
+      ],
+      "differentiation_demo": "Show the sophistication of our AI correlation algorithms that would take years to develop internally"
+    }
+  }
+}

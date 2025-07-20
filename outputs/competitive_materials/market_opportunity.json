@@ -1,0 +1,105 @@
+{
+  "market_opportunity": {
+    "market_size": {
+      "total_addressable_market": {
+        "value": "$274B",
+        "description": "Global business intelligence and analytics market",
+        "growth_rate": "10.1% CAGR through 2028",
+        "source": "Fortune Business Insights, 2023"
+      },
+      "serviceable_addressable_market": {
+        "value": "$89B",
+        "description": "Mid-market and enterprise AI-powered analytics",
+        "growth_rate": "22.3% CAGR",
+        "target_segments": [
+          "Mid-market enterprises",
+          "AI-ready organizations",
+          "Data-driven companies"
+        ]
+      },
+      "serviceable_obtainable_market": {
+        "value": "$2.1B",
+        "description": "Cross-domain correlation analytics market",
+        "timeline": "5-year addressable opportunity",
+        "key_drivers": [
+          "AI adoption acceleration",
+          "Data democratization trends",
+          "Real-time analytics demand"
+        ]
+      }
+    },
+    "market_trends": {
+      "driving_adoption": [
+        {
+          "trend": "AI democratization",
+          "impact": "Business users expect AI-powered insights without technical complexity",
+          "opportunity": "$45B market for no-code/low-code analytics"
+        },
+        {
+          "trend": "Real-time decision making",
+          "impact": "Companies need insights in minutes, not months",
+          "opportunity": "75% of organizations prioritize real-time analytics"
+        },
+        {
+          "trend": "Data explosion",
+          "impact": "More data sources create more correlation opportunities",
+          "opportunity": "328% increase in data volume by 2025"
+        },
+        {
+          "trend": "Hybrid work transformation",
+          "impact": "Distributed teams need centralized insight access",
+          "opportunity": "$12B remote collaboration analytics market"
+        }
+      ],
+      "market_barriers": [
+        "Technical complexity of current solutions",
+        "High implementation costs and long timelines",
+        "Vendor lock-in concerns",
+        "Skills gap in data science and analytics"
+      ],
+      "our_advantages": [
+        "Eliminates technical barriers with natural language interface",
+        "Rapid implementation reduces cost and risk",
+        "API-first architecture prevents vendor lock-in",
+        "No data science expertise required"
+      ]
+    },
+    "customer_segments": {
+      "primary_targets": [
+        {
+          "segment": "Mid-market manufacturing",
+          "size": "47k companies globally",
+          "pain_points": [
+            "Unplanned downtime",
+            "Quality issues",
+            "Supply chain disruptions"
+          ],
+          "willingness_to_pay": "$100k-300k annually",
+          "decision_timeline": "3-6 months"
+        },
+        {
+          "segment": "E-commerce retailers",
+          "size": "156k companies with $10M+ revenue",
+          "pain_points": [
+            "Marketing attribution",
+            "Inventory optimization",
+            "Customer retention"
+          ],
+          "willingness_to_pay": "$50k-200k annually",
+          "decision_timeline": "2-4 months"
+        },
+        {
+          "segment": "Regional financial institutions",
+          "size": "12k banks and credit unions",
+          "pain_points": [
+            "Risk assessment",
+            "Regulatory compliance",
+            "Customer acquisition"
+          ],
+          "willingness_to_pay": "$200k-500k annually",
+          "decision_timeline": "6-12 months"
+        }
+      ]
+    }
+  }
+}

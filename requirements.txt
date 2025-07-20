@@ -87,10 +87,14 @@ dramatiq==1.14.2
 # Interactive plotting
 plotly==5.17.0
 dash==2.16.1
+streamlit==1.28.0
 
 # Statistical plotting
 seaborn==0.13.0
 matplotlib==3.8.2
+
+# Network analysis
+networkx==3.2.1
 
 # Geographic visualization
 folium==0.15.1

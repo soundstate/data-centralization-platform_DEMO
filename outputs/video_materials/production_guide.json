@@ -1,0 +1,65 @@
+{
+  "video_production_guide": {
+    "overview": "Professional video demonstration strategy for Data Centralization Platform",
+    "target_videos": [
+      {
+        "name": "Executive Overview",
+        "duration": "5 minutes",
+        "audience": "C-level executives, decision makers",
+        "purpose": "High-level business value and ROI demonstration",
+        "style": "Professional, business-focused, results-oriented"
+      },
+      {
+        "name": "Technical Deep Dive",
+        "duration": "15 minutes",
+        "audience": "CTOs, IT directors, technical teams",
+        "purpose": "Architecture, implementation, and technical capabilities",
+        "style": "Detailed, code-focused, technically comprehensive"
+      },
+      {
+        "name": "Industry Use Cases",
+        "duration": "8 minutes",
+        "audience": "Industry professionals, potential clients",
+        "purpose": "Specific use case demonstrations and outcomes",
+        "style": "Scenario-based, outcome-focused, industry-specific"
+      },
+      {
+        "name": "Live Dashboard Demo",
+        "duration": "10 minutes",
+        "audience": "End users, analysts, managers",
+        "purpose": "Interactive platform demonstration",
+        "style": "Live, interactive, user-experience focused"
+      }
+    ],
+    "technical_setup": {
+      "recording_equipment": {
+        "screen_recording": "OBS Studio (free, professional quality)",
+        "audio": "Professional USB microphone (Blue Yeti or similar)",
+        "video_editing": "DaVinci Resolve (free) or Adobe Premiere Pro",
+        "graphics": "Canva Pro or Adobe After Effects for animations"
+      },
+      "recording_settings": {
+        "resolution": "1920x1080 (1080p)",
+        "frame_rate": "30 fps",
+        "bitrate": "8000-10000 kbps for high quality",
+        "audio": "48kHz, 16-bit minimum"
+      },
+      "environment_setup": {
+        "quiet_space": "Noise-free recording environment",
+        "lighting": "Natural light or professional lighting setup",
+        "background": "Clean, professional background or virtual background",
+        "internet": "Stable connection for live demo portions"
+      }
+    },
+    "pre_production_checklist": [
+      "Test all demo scenarios thoroughly",
+      "Prepare fallback plans for technical issues",
+      "Create slide deck for intros and transitions",
+      "Set up clean demo environment with fresh data",
+      "Practice timing and transitions",
+      "Prepare B-roll footage and graphics",
+      "Test audio levels and quality",
+      "Verify all links and integrations work"
+    ]
+  }
+}
