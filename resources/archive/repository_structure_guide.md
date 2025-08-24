@@ -131,21 +131,8 @@ shared_core/
 
 ## 🔧 Services Architecture
 
-### 🗂️ `/services/` - Microservices
-**Purpose**: Independent, scalable services for different aspects of data processing
-
-#### `services/data_collection/` - Data Ingestion Services
-```
-data_collection/
-├── 📁 spotify_collector/           # Music streaming data ingestion
-├── 📁 musicbrainz_collector/       # Music metadata collection
-├── 📁 tmdb_collector/              # Entertainment data collection
-├── 📁 openweathermap_collector/    # Weather data historical + current
-└── 📁 pokemon_collector/           # Gaming/pop culture data
-```
-
-#### `services/` - Enterprise Services Architecture
-**Note**: This codebase includes both core data processing and enterprise-grade services
+### 🗂️ `/services/` - Enterprise Microservices
+**Purpose**: Independent, scalable services for different aspects of data processing and enterprise features
 
 ```
 services/
@@ -158,26 +145,25 @@ services/
 ├── 📁 llm_integration/             # LLM and AI services
 │   └── 📁 llm_backend/             # Node.js LLM backend service
 ├── 📁 correlation_engine/          # Statistical correlation analysis
-├── 📁 analytics/                   # Advanced analytics services
-├── 📁 ai_models/                   # AI model management
+├── 📁 anomaly_detection/           # Anomaly detection algorithms
 ├── 📁 authentication_service/      # Authentication and authorization
 ├── 📁 authorization_service/       # Role-based access control
 ├── 📁 billing_integration/         # Billing and subscription management
 ├── 📁 collaboration_services/      # Team collaboration features
+│   ├── 📁 conversation_management/ # Conversation tracking
+│   └── 📁 task_management/         # Task coordination
 ├── 📁 configuration_service/       # Dynamic configuration management
 ├── 📁 feature_flag_service/        # Feature flag management
-├── 📁 health_check_service/        # Health monitoring
-├── 📁 inference_service/           # ML inference
-├── 📁 model_training_service/      # ML model training
+├── 📁 health_check_service/        # Health monitoring and diagnostics
+├── 📁 inference_service/           # ML model inference
+├── 📁 model_training_service/      # ML model training pipelines
 ├── 📁 nlp_service/                 # Natural language processing
-├── 📁 notification_service/        # Notification management
-├── 📁 predictive_analytics/        # Predictive modeling
-├── 📁 scheduling_service/          # Task scheduling
-├── 📁 support_portal/              # Customer support
-├── 📁 tenant_management/           # Multi-tenant management
-└── 📁 anomaly_detection/           # Anomaly detection algorithms
+├── 📁 notification_service/        # Notification and alerting
+├── 📁 predictive_analytics/        # Predictive modeling services
+├── 📁 scheduling_service/          # Task and workflow scheduling
+├── 📁 support_portal/              # Customer support integration
+└── 📁 tenant_management/           # Multi-tenant management
 ```
-
 
 ---
 
@@ -211,10 +197,6 @@ ai_models/
 └── 📁 training_pipelines/          # Model training workflows
 ```
 
----
-
-## 📊 Data Storage
-
 ### 💾 `/data/` - Data Storage and Processing
 **Purpose**: Centralized data storage with enterprise-grade organization
 
@@ -233,25 +215,6 @@ data/
 ├── 📁 search_indexes/              # Search index data and metadata
 └── 📁 time_series/                 # Time-series data storage
 ```
-│   └── 📁 correlation/             # Correlation embeddings
-├── 📁 visualizations/              # Generated charts and graphs
-│   ├── 📁 charts/                  # Statistical charts
-│   ├── 📁 maps/                    # Geographic visualizations
-│   └── 📁 heatmaps/                # Correlation heatmaps
-├── 📁 insights/                    # Generated insights and reports
-│   ├── 📁 reports/                 # Automated reports
-│   ├── 📁 alerts/                  # Correlation alerts
-│   └── 📁 summaries/               # Data summaries
-├── 📁 statistics/                  # Statistical analysis results
-│   ├── 📁 significance/            # Statistical significance tests
-│   ├── 📁 bias_detection/          # Bias analysis results
-│   └── 📁 validation/              # Data validation results
-├── 📁 knowledge_graphs/            # Entity relationship data (Neo4j format)
-└── 📁 llm_training/                # Formatted training datasets
-    ├── 📁 conversational/          # Q&A datasets
-    ├── 📁 entities/                # Entity relationship data
-    └── 📁 temporal/                # Time-series data
-```
 
 ---
 
@@ -263,19 +226,15 @@ data/
 ```
 infrastructure/
 ├── 📁 docker/                      # Docker configurations
-│   ├── 📁 services/                # Individual service containers
-│   ├── 📁 databases/               # Database container configs
-│   ├── 📁 monitoring/              # Monitoring container configs
-│   └── 📄 docker-compose.yml       # Local development setup
-├── 📁 azure/                       # Azure deployment templates
-│   ├── 📁 bicep/                   # Azure Bicep templates
-│   ├── 📁 terraform/               # Terraform configurations
-│   └── 📁 container_apps/          # Azure Container Apps configs
+│   ├── 📄 docker-compose.yml       # Local development setup
+│   ├── 📁 application/             # Application container configs
+│   └── 📁 database/                # Database container configs
 ├── 📁 kubernetes/                  # Kubernetes deployment configs
-│   ├── 📁 manifests/               # K8s manifests
-│   ├── 📁 helm/                    # Helm charts
-│   └── 📁 operators/               # Custom operators
+│   ├── 📁 application/             # Application K8s manifests
+│   └── 📁 database/                # Database K8s manifests
+├── 📁 terraform/                   # Terraform infrastructure as code
 ├── 📁 environments/                # Environment-specific configurations
+│   ├── 📄 .env.example             # Environment template
 │   ├── 📁 development/             # Development environment
 │   │   ├── 📁 config/              # Development config files
 │   │   └── 📁 secrets/             # Development secrets
@@ -285,17 +244,16 @@ infrastructure/
 │   ├── 📁 production/              # Production environment
 │   │   ├── 📁 config/              # Production config files
 │   │   └── 📁 secrets/             # Production secrets
-│   └── 📁 shared/                  # Shared configurations
-│       ├── 📁 config/              # Shared config files
-│       └── 📁 secrets/             # Shared secrets
-├── 📁 github_actions/              # GitHub Actions CI/CD workflows
-├── 📁 local/                       # Local development setup
-└── 📁 pipeline/                    # CI/CD pipeline configurations
+│   ├── 📁 shared/                  # Shared configurations
+│   │   ├── 📁 config/              # Shared config files
+│   │   └── 📁 secrets/             # Shared secrets
+│   └── 📁 powershell/              # PowerShell automation scripts
+└── 📁 environment/                 # Additional environment configuration
 ```
 
 ---
 
-## 🎨 User Interface
+## 🎨 User Interface & Frontend
 
 ### 🖥️ `/ui/` - User Interfaces and Frontend Demos
 **Purpose**: Frontend applications, demos, and user interface components
@@ -351,7 +309,9 @@ resources/
 │   ├── 📁 ai/                      # AI-specific documentation
 │   ├── 📁 development/             # Development guides
 │   │   ├── 📁 feature-planning/    # Feature planning documentation
+│   │   │   └── 📁 examples/        # Planning examples
 │   │   ├── 📁 implementation/      # Implementation guides
+│   │   │   └── 📁 examples/        # Implementation examples
 │   │   └── 📁 testing/             # Testing documentation
 │   ├── 📁 examples/                # Code and usage examples
 │   │   └── 📁 data_exploration/    # Data exploration examples
@@ -362,7 +322,7 @@ resources/
 │   └── 📁 user-guides/             # User guidance documentation
 ├── 📁 archive/                     # Archived documentation
 │   ├── 📄 demo-git-commit-guide.md # Git commit guidelines
-│   └── 📄 folder_structure_guide.md # This document
+│   └── 📄 folder_structure_guide.md # Original structure guide
 └── 📁 documentation/               # Additional documentation
     ├── 📄 color-palette-design-system.md # Design system documentation
     ├── 📄 data-ingestion-pipeline-brainstorming.md # Pipeline planning
@@ -473,12 +433,64 @@ multi_tenant/
 └── 📁 tenant_configs/              # Tenant-specific configurations
 ```
 
+### 📊 `/compliance/` - Compliance and Audit
+**Purpose**: Compliance reporting, audit trails, and regulatory requirements
+
+```
+compliance/
+├── 📁 audit_reports/               # Automated audit reporting
+├── 📁 certification_tracking/      # Compliance certification tracking
+├── 📁 compliance_dashboards/       # Compliance monitoring dashboards
+├── 📁 policy_enforcement/          # Policy enforcement mechanisms
+└── 📁 risk_assessment/             # Risk assessment frameworks
+```
+
+### ⚙️ `/operations/` - Operations and Maintenance
+**Purpose**: Operational procedures, maintenance, and system management
+
+```
+operations/
+├── 📁 backup_strategies/           # Data backup and recovery procedures
+├── 📁 capacity_planning/           # System capacity planning tools
+├── 📁 disaster_recovery/           # Disaster recovery procedures
+├── 📁 maintenance_windows/         # Maintenance scheduling and procedures
+└── 📁 performance_tuning/          # Performance optimization guidelines
+```
+
 ### 📊 `/logs/` - Centralized Logging
 **Purpose**: Centralized application logging and audit trails
 
 ```
 logs/
 └── 📁 functions/                   # Function-specific logs
+```
+
+---
+
+## 🔗 Enterprise API Management
+
+### 🌐 `/enterprise_apis/` - Enterprise API Layer
+**Purpose**: Enterprise-grade API management and integration
+
+```
+enterprise_apis/
+├── 📁 api_documentation/           # API documentation and specifications
+├── 📁 graphql/                     # GraphQL schema and resolvers
+├── 📁 grpc_services/               # gRPC service definitions
+├── 📁 rest_apis/                   # REST API implementations
+└── 📁 webhook_handlers/            # Webhook processing services
+```
+
+### 🛠️ `/client_tools/` - Client Tools and Utilities
+**Purpose**: Client-side tools, wizards, and troubleshooting utilities
+
+```
+client_tools/
+├── 📁 configuration_wizards/       # Setup and configuration wizards
+├── 📁 health_diagnostics/          # System health diagnostic tools
+├── 📁 installation_scripts/        # Installation automation scripts
+├── 📁 troubleshooting_tools/       # Troubleshooting and debug tools
+└── 📁 update_mechanisms/           # Update and patch management
 ```
 
 ---
@@ -505,6 +517,9 @@ logs/
 | **Demo Material** | `demo/{demo_type}/` | `interactive_demos/`, `presentation_materials/` |
 | **Generated Output** | `outputs/{category}/` | `competitive_materials/`, `video_materials/` |
 | **UI Component** | `ui/{ui_type}/` | `demo/llm-frontend/`, `figma-extract/` |
+| **Enterprise API** | `enterprise_apis/{api_type}/` | `rest_apis/`, `graphql/`, `grpc_services/` |
+| **Security Policy** | `security/{security_type}/` | `encryption/`, `vulnerability_scanning/` |
+| **Monitoring Config** | `monitoring/{monitor_type}/` | `alerting/`, `metrics/`, `tracing/` |
 
 ### 📝 Naming Conventions
 
@@ -564,12 +579,34 @@ logs/
 
 ---
 
-**This folder structure supports**:
-- ✅ **Scalable microservices architecture**
-- ✅ **Clear separation of concerns**
-- ✅ **Easy navigation and maintenance**
-- ✅ **Comprehensive testing strategy**
-- ✅ **Enterprise-grade organization**
-- ✅ **Consistent development patterns**
+## 🎯 Architecture Highlights
 
-For questions about file placement or folder structure, refer to this guide or create an issue in the project repository.
+**Enterprise-Grade Features**:
+- ✅ **Multi-tenant architecture** with isolation policies and resource quotas
+- ✅ **Comprehensive security framework** with compliance and audit capabilities
+- ✅ **Scalable microservices architecture** with containerized deployment
+- ✅ **Advanced analytics and reporting** with real-time processing
+- ✅ **AI/ML model management** with training pipelines and inference engines
+- ✅ **Monitoring and observability** with distributed tracing and alerting
+- ✅ **Client tools and diagnostics** for enterprise deployment support
+
+**Core Data Platform Features**:
+- ✅ **Multi-API integration** with standardized client patterns
+- ✅ **Statistical correlation analysis** with significance testing
+- ✅ **LLM integration** with vector search and RAG capabilities
+- ✅ **Interactive visualizations** and dashboard components
+- ✅ **Automated demo generation** and presentation materials
+- ✅ **Comprehensive testing strategy** with unit and integration coverage
+
+---
+
+**This repository structure supports**:
+- ✅ **Enterprise-grade scalability and multi-tenancy**
+- ✅ **Comprehensive security and compliance frameworks**
+- ✅ **Advanced AI/ML capabilities with model management**
+- ✅ **Real-time analytics and monitoring**
+- ✅ **Microservices architecture with clear separation of concerns**
+- ✅ **Extensive documentation and demo materials**
+- ✅ **Consistent development patterns and best practices**
+
+For questions about file placement or folder structure, refer to this guide or the WARP.md development guide.
