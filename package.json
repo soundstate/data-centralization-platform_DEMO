@@ -1,0 +1,41 @@
+{
+  "name": "data-centralization-platform",
+  "version": "1.0.0",
+  "description": "Enterprise data centralization platform",
+  "private": true,
+  "workspaces": [
+    "services/*",
+    "ui/*",
+    "client_tools/*",
+    "functions"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces",
+    "lint": "npm run lint --workspaces",
+    "dev": "concurrently \"npm run dev --workspace=ui\" \"npm run dev --workspace=services\"",
+    "docker:up": "docker-compose -f infrastructure/docker/docker-compose.yml up -d",
+    "docker:down": "docker-compose -f infrastructure/docker/docker-compose.yml down",
+    "setup": "npm install && npm run setup --workspaces"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "eslint": "^8.57.0",
+    "prettier": "^3.0.3",
+    "typescript": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/data-centralization-platform.git"
+  },
+  "keywords": [
+    "data-centralization",
+    "enterprise",
+    "microservices",
+    "multi-tenant"
+  ]
+}
