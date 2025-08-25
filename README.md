@@ -172,6 +172,7 @@ retrieval_chain = ConversationalRetrievalChain(
 - Python 3.11+
 - Docker & Docker Compose
 - PostgreSQL 16 with pgvector extension
+- Redis (for OAuth sessions and caching)
 - API keys for integrated services
 
 ### Quick Setup
@@ -181,22 +182,56 @@ git clone https://github.com/[username]/data-centralization-platform.git
 cd data-centralization-platform
 
 # Start infrastructure
-docker-compose up -d postgres redis ollama
+make docker-up  # Starts PostgreSQL, Redis, pgAdmin
 
-# Install packages in development mode
+# Install shared core package in development mode
 pip install -e packages/shared_core
-pip install -e services/data_collection
-pip install -e services/insights
 
 # Configure environment
-cp .env.example .env
-# Add your API keys to .env
+cp infrastructure/environments/.env.example .env
+# Add your API keys and credentials to .env
 
 # Run database migrations
+cd packages/shared_core
 alembic upgrade head
+```
 
-# Start data collection
-python -m services.data_collection.spotify_collector
+### 🎬 Try the Demos & Testing
+
+#### Basic API Testing
+```bash
+# Test MusicBrainz API connectivity
+cd development/testing/functional
+python test_musicbrainz_basic.py
+```
+
+#### Interactive Demos
+```bash
+# Run correlation analysis demo
+cd development/demos
+python correlation_analysis_demo.py
+
+# Start interactive dashboard
+cd development/demos/interactive
+streamlit run streamlit_dashboard.py
+```
+
+#### OAuth Authentication Testing
+```bash
+# Test MusicBrainz OAuth 2.0 flow
+cd development/testing/oauth
+python test_oauth_flow.py
+```
+
+#### Data Collection Services
+```bash
+# Start MusicBrainz data collection
+cd services/data_collection/musicbrainz_collector
+python main.py
+
+# Start Spotify data collection
+cd services/data_collection/spotify_collector
+python main.py
 ```
 
 ### Development Environment
@@ -215,6 +250,38 @@ services:
     image: ollama/ollama:latest
     # Pre-loaded with llama3:8b-instruct-q4_K_M
 ```
+
+## 🛠️ Development & Testing
+
+All demo scripts, testing files, and development tools are organized in the `development/` directory:
+
+```
+development/
+├── demos/                       # Interactive demonstrations
+│   ├── correlation_analysis_demo.py
+│   ├── data/                   # Demo data generators
+│   ├── interactive/            # Streamlit dashboards
+│   ├── outputs/                # Generated visualizations
+│   └── visualization/          # Chart testing
+├── testing/                     # All test suites
+│   ├── functional/             # End-to-end tests
+│   ├── integration/            # API integration tests
+│   ├── oauth/                  # Authentication testing
+│   └── unit/                   # Component unit tests
+├── tools/                       # Development utilities
+│   ├── generators/             # Code generators
+│   └── utilities/              # Business tools
+└── examples/                    # Reference implementations
+```
+
+**📖 Development Guide**: See `development/README.md` for detailed usage instructions, testing workflows, and troubleshooting guides.
+
+### Key Testing Scenarios
+- **API Connectivity**: Verify all 7 API integrations work correctly
+- **OAuth Flows**: Test MusicBrainz OAuth 2.0 authentication
+- **Data Processing**: Validate correlation analysis and statistical significance
+- **Visualization**: Generate interactive charts and dashboards
+- **LLM Integration**: Test embedding generation and semantic search
 
 
 ## 📊 Data Visualization & Interactive Dashboards

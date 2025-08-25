@@ -12,10 +12,12 @@ Comprehensive client for Spotify Web API with:
 import base64
 import secrets
 import urllib.parse
-from typing import Dict, List, Optional, Any
+from datetime import datetime, timedelta
+from typing import Dict, List, Optional, Any, Tuple
 
-from shared_core.config.base_client import BaseAPIClient, APIResponse
-from shared_core.config.logging_config import get_logger
+from ....config.base_client import BaseAPIClient, APIResponse
+from ....utils.centralized_logging import CentralizedLogger
+from ....auth.spotify_oauth import SpotifyOAuth, SpotifyOAuthError
 
 
 class SpotifyClient(BaseAPIClient):
@@ -54,7 +56,10 @@ class SpotifyClient(BaseAPIClient):
         self.redirect_uri = redirect_uri
         self.access_token: Optional[str] = None
         self.refresh_token: Optional[str] = None
-        self.token_expires_at: Optional[int] = None
+        self.token_info: Optional[Dict[str, Any]] = None
+        
+        # Initialize OAuth client for modern flow
+        self._oauth_client: Optional[SpotifyOAuth] = None
         
         # Override headers for Spotify API
         self.auth_base_url = "https://accounts.spotify.com"
@@ -476,3 +481,214 @@ class SpotifyClient(BaseAPIClient):
             self.logger.debug(f"📊 Extracted features for correlation: {list(correlation_features.keys())}")
         
         return correlation_features
+    
+    # Modern OAuth methods using SpotifyOAuth class
+    async def get_oauth_client(self) -> SpotifyOAuth:
+        """
+        Get or create OAuth client instance.
+        
+        Returns:
+            SpotifyOAuth: Configured OAuth client
+        """
+        if self._oauth_client is None:
+            self._oauth_client = SpotifyOAuth()
+        return self._oauth_client
+    
+    async def get_oauth_authorization_url(self, scopes: Optional[List[str]] = None) -> Tuple[str, str]:
+        """
+        Generate OAuth authorization URL using modern OAuth client.
+        
+        Args:
+            scopes: List of Spotify scopes to request
+            
+        Returns:
+            Tuple of (authorization_url, state_parameter)
+        """
+        oauth_client = await self.get_oauth_client()
+        return oauth_client.get_authorization_url(scopes=scopes)
+    
+    async def oauth_exchange_code_for_tokens(
+        self, 
+        authorization_code: str, 
+        state: str,
+        expected_state: Optional[str] = None
+    ) -> bool:
+        """
+        Exchange authorization code for tokens using modern OAuth client.
+        
+        Args:
+            authorization_code: Authorization code from callback
+            state: State parameter from callback
+            expected_state: Expected state for validation
+            
+        Returns:
+            bool: True if successful
+        """
+        try:
+            oauth_client = await self.get_oauth_client()
+            token_info = await oauth_client.exchange_code_for_token(
+                authorization_code, state, expected_state
+            )
+            
+            # Store token information
+            self.token_info = token_info
+            self.access_token = token_info["access_token"]
+            self.refresh_token = token_info.get("refresh_token")
+            
+            if self.debug_mode:
+                self.logger.info("✅ Successfully obtained OAuth tokens using modern client")
+            
+            return True
+            
+        except SpotifyOAuthError as e:
+            if self.debug_mode:
+                self.logger.error(f"❌ OAuth token exchange failed: {e}")
+            return False
+    
+    async def oauth_refresh_token(self) -> bool:
+        """
+        Refresh access token using modern OAuth client.
+        
+        Returns:
+            bool: True if successful
+        """
+        if not self.refresh_token:
+            if self.debug_mode:
+                self.logger.error("❌ No refresh token available for OAuth refresh")
+            return False
+        
+        try:
+            oauth_client = await self.get_oauth_client()
+            token_info = await oauth_client.refresh_access_token(self.refresh_token)
+            
+            # Update token information
+            self.token_info = token_info
+            self.access_token = token_info["access_token"]
+            self.refresh_token = token_info.get("refresh_token", self.refresh_token)
+            
+            if self.debug_mode:
+                self.logger.info("🔄 Successfully refreshed OAuth tokens")
+            
+            return True
+            
+        except SpotifyOAuthError as e:
+            if self.debug_mode:
+                self.logger.error(f"❌ OAuth token refresh failed: {e}")
+            return False
+    
+    async def validate_access_token(self) -> bool:
+        """
+        Validate current access token using modern OAuth client.
+        
+        Returns:
+            bool: True if token is valid
+        """
+        if not self.access_token:
+            return False
+        
+        try:
+            oauth_client = await self.get_oauth_client()
+            is_valid = await oauth_client.validate_token(self.access_token)
+            
+            if self.debug_mode:
+                status = "valid" if is_valid else "invalid"
+                self.logger.debug(f"🔍 Access token is {status}")
+            
+            return is_valid
+            
+        except Exception as e:
+            if self.debug_mode:
+                self.logger.error(f"Token validation error: {e}")
+            return False
+    
+    def is_token_expired(self, buffer_minutes: int = 5) -> bool:
+        """
+        Check if current token is expired or will expire soon.
+        
+        Args:
+            buffer_minutes: Minutes before expiration to consider expired
+            
+        Returns:
+            bool: True if token is expired or will expire soon
+        """
+        if not self.token_info:
+            return True
+        
+        try:
+            oauth_client = SpotifyOAuth()
+            return oauth_client.is_token_expired(self.token_info, buffer_minutes)
+        except Exception:
+            return True  # Assume expired on error
+    
+    async def ensure_valid_token(self) -> bool:
+        """
+        Ensure we have a valid access token, refreshing if necessary.
+        
+        Returns:
+            bool: True if we have a valid token
+        """
+        # Check if token exists
+        if not self.access_token:
+            if self.debug_mode:
+                self.logger.warning("⚠️ No access token available")
+            return False
+        
+        # Check if token is expired
+        if self.is_token_expired():
+            if self.debug_mode:
+                self.logger.info("🔄 Token is expired, attempting refresh")
+            return await self.oauth_refresh_token()
+        
+        # Validate token with API
+        return await self.validate_access_token()
+    
+    def set_token_info(self, token_info: Dict[str, Any]) -> None:
+        """
+        Set token information from external source.
+        
+        Args:
+            token_info: Token information dictionary
+        """
+        self.token_info = token_info
+        self.access_token = token_info.get("access_token")
+        self.refresh_token = token_info.get("refresh_token")
+        
+        if self.debug_mode:
+            self.logger.info("🔐 Token information updated")
+    
+    # Async context manager support
+    async def __aenter__(self):
+        """
+        Async context manager entry.
+        
+        Returns:
+            self: The client instance
+        """
+        if self.debug_mode:
+            self.logger.info("🔓 Entering Spotify client context")
+        return self
+    
+    async def __aexit__(self, exc_type, exc_val, exc_tb):
+        """
+        Async context manager exit.
+        
+        Args:
+            exc_type: Exception type if an exception occurred
+            exc_val: Exception value if an exception occurred
+            exc_tb: Exception traceback if an exception occurred
+        """
+        try:
+            # Close OAuth client if it exists
+            if self._oauth_client:
+                await self._oauth_client.close()
+                self._oauth_client = None
+            
+            # Close the base client
+            await self.close()
+            
+            if self.debug_mode:
+                self.logger.info("🔒 Exited Spotify client context")
+                
+        except Exception as e:
+            if self.debug_mode:
+                self.logger.error(f"❌ Error during context exit: {e}")

@@ -15,8 +15,8 @@ from typing import Dict, List, Optional, Any, Tuple
 from datetime import datetime, timedelta
 from urllib.parse import urlencode
 
-from shared_core.config.base_client import BaseAPIClient, APIResponse
-from shared_core.config.logging_config import get_logger
+from ....config.base_client import APIResponse, BaseAPIClient
+from ....utils.centralized_logging import CentralizedLogger
 
 
 class OpenWeatherMapClient(BaseAPIClient):

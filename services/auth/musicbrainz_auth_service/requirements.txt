@@ -1,0 +1,16 @@
+# FastAPI and HTTP server dependencies
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+
+# Async HTTP client
+aiohttp==3.9.1
+
+# Redis for session storage
+redis[hiredis]==5.0.1
+
+# Environment variable loading
+python-dotenv==1.0.0
+
+# Development/shared dependencies (install shared_core package)
+-e ../../../packages/shared_core

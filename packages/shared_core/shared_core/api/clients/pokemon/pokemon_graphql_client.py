@@ -8,7 +8,7 @@ Comprehensive client for Pokemon GraphQL API with:
 - Evolution chains for progression analysis
 """
 
-from config.base_client import APIResponse, BaseAPIClient
+from ....config.base_client import APIResponse, BaseAPIClient
 from gql import Client, gql
 from gql.transport.httpx import HTTPXAsyncTransport
 

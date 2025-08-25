@@ -23,7 +23,7 @@ import logging
 from typing import Dict, Optional, Any
 from datetime import datetime
 
-from shared_core.api.clients.base_client import BaseAPIClient, APIResponse
+from ....config.base_client import APIResponse, BaseAPIClient
 
 
 class MusicBrainzClient(BaseAPIClient):

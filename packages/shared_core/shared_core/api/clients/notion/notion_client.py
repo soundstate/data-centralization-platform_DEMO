@@ -26,8 +26,8 @@ from datetime import datetime
 from typing import Dict, List, Optional, Any, Union
 from urllib.parse import urljoin
 
-from shared_core.api.clients.base_client import BaseAPIClient, APIResponse
-from shared_core.logging.centralized_logger import CentralizedLogger
+from ....config.base_client import APIResponse, BaseAPIClient
+from ....utils.centralized_logging import CentralizedLogger
 
 
 class NotionClient(BaseAPIClient):

@@ -25,7 +25,7 @@ from datetime import datetime
 sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent / "packages" / "shared_core"))
 
 from shared_core.config.spotify_config import SpotifyConfig
-from shared_core.api.clients.spotify import SpotifyClient
+from shared_core.api.clients.spotify.spotify_client import SpotifyClient
 from shared_core.utils.centralized_logging import CentralizedLogger
 
 # Initialize logger

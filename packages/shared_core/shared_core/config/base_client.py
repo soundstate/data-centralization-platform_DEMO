@@ -20,7 +20,7 @@ import httpx
 from tenacity import retry, stop_after_attempt, wait_exponential
 from pydantic import BaseModel, Field
 
-from ...config.logging_config import get_logger
+from ..utils.centralized_logging import CentralizedLogger
 
 
 class RequestMetrics(BaseModel):
@@ -88,7 +88,7 @@ class BaseAPIClient:
         self.client_name = client_name
         
         # Initialize logger
-        self.logger = get_logger(f"api_client.{client_name}")
+        self.logger = CentralizedLogger.get_logger(f"api_client.{client_name}")
         
         # Request tracking
         self.request_history: List[RequestMetrics] = []

@@ -16,7 +16,7 @@ import os
 import logging
 from typing import Dict, Any
 
-from shared_core.logging.centralized_logger import CentralizedLogger
+from shared_core.utils.centralized_logging import CentralizedLogger
 
 
 class MusicBrainzConfig:
@@ -28,6 +28,9 @@ class MusicBrainzConfig:
     
     Environment Variables:
     - MUSICBRAINZ_USER_AGENT: Custom User-Agent (required)
+    - MUSICBRAINZ_CLIENT_ID: OAuth client ID (required for OAuth)
+    - MUSICBRAINZ_CLIENT_SECRET: OAuth client secret (required for OAuth)
+    - MUSICBRAINZ_REDIRECT_URI: OAuth redirect URI (default: http://localhost:8000/auth/musicbrainz/callback)
     - MUSICBRAINZ_RATE_LIMIT_PER_SECOND: Rate limit in requests per second (default: 1.0)
     - MUSICBRAINZ_DEBUG_MODE: Enable debug logging (default: false)
     
@@ -38,6 +41,11 @@ class MusicBrainzConfig:
         # Get full configuration
         config = MusicBrainzConfig.get_config_summary()
     """
+    
+    # OAuth URLs for MusicBrainz
+    OAUTH_AUTHORIZE_URL = "https://musicbrainz.org/oauth2/authorize"
+    OAUTH_TOKEN_URL = "https://musicbrainz.org/oauth2/token"
+    OAUTH_DEFAULT_SCOPES = ["profile", "email", "collection", "submit_isrc", "submit_barcode"]
     
     _instance = None
     _logger = None
@@ -182,4 +190,130 @@ class MusicBrainzConfig:
             Dictionary with default request parameters
         """
         return {}  # No default parameters for MusicBrainz API
+    
+    # OAuth-specific configuration methods
+    
+    @classmethod
+    def client_id(cls) -> str:
+        """
+        Get OAuth client ID from environment.
         
+        Returns:
+            OAuth client ID
+            
+        Raises:
+            ValueError: If client ID is not found in environment
+        """
+        client_id = os.getenv("MUSICBRAINZ_CLIENT_ID", "").strip()
+        if not client_id:
+            error_msg = "MUSICBRAINZ_CLIENT_ID environment variable is required for OAuth but not set"
+            if cls._logger:
+                cls._logger.error(error_msg)
+            raise ValueError(error_msg)
+        
+        if cls._logger:
+            cls._logger.debug("MusicBrainz OAuth client ID retrieved from environment")
+        
+        return client_id
+    
+    @classmethod
+    def client_secret(cls) -> str:
+        """
+        Get OAuth client secret from environment.
+        
+        Returns:
+            OAuth client secret
+            
+        Raises:
+            ValueError: If client secret is not found in environment
+        """
+        client_secret = os.getenv("MUSICBRAINZ_CLIENT_SECRET", "").strip()
+        if not client_secret:
+            error_msg = "MUSICBRAINZ_CLIENT_SECRET environment variable is required for OAuth but not set"
+            if cls._logger:
+                cls._logger.error(error_msg)
+            raise ValueError(error_msg)
+        
+        if cls._logger:
+            cls._logger.debug("MusicBrainz OAuth client secret retrieved from environment")
+        
+        return client_secret
+    
+    @classmethod
+    def redirect_uri(cls) -> str:
+        """
+        Get OAuth redirect URI from environment.
+        
+        Returns:
+            OAuth redirect URI (default: http://localhost:8000/auth/musicbrainz/callback)
+        """
+        return os.getenv("MUSICBRAINZ_REDIRECT_URI", "http://localhost:8000/auth/musicbrainz/callback")
+    
+    @classmethod
+    def validate_oauth_credentials(cls) -> bool:
+        """
+        Validate OAuth configuration credentials.
+        
+        Returns:
+            True if OAuth configuration is valid, False otherwise
+        """
+        try:
+            client_id = cls.client_id()
+            client_secret = cls.client_secret()
+            redirect_uri = cls.redirect_uri()
+            
+            # Basic validation
+            if not client_id or len(client_id) < 10:
+                if cls._logger:
+                    cls._logger.error("OAuth client ID appears to be invalid")
+                return False
+            
+            if not client_secret or len(client_secret) < 10:
+                if cls._logger:
+                    cls._logger.error("OAuth client secret appears to be invalid")
+                return False
+            
+            if not redirect_uri.startswith(('http://', 'https://')):
+                if cls._logger:
+                    cls._logger.error("OAuth redirect URI must be a valid URL")
+                return False
+            
+            if cls._logger:
+                cls._logger.info("MusicBrainz OAuth configuration validation successful")
+            
+            return True
+            
+        except Exception as e:
+            if cls._logger:
+                cls._logger.error(f"MusicBrainz OAuth configuration validation failed: {str(e)}")
+            return False
+    
+    @classmethod
+    def get_oauth_config(cls) -> Dict[str, Any]:
+        """
+        Get OAuth configuration values.
+        
+        Returns:
+            Dictionary with OAuth configuration parameters
+        """
+        try:
+            client_id = cls.client_id()
+        except ValueError:
+            client_id = "NOT_SET"
+        
+        try:
+            client_secret = cls.client_secret()
+            # Don't expose the actual secret, just indicate if it's set
+            client_secret_status = "SET" if client_secret else "NOT_SET"
+        except ValueError:
+            client_secret_status = "NOT_SET"
+        
+        return {
+            "client_id": client_id,
+            "client_secret": client_secret_status,
+            "redirect_uri": cls.redirect_uri(),
+            "authorize_url": cls.OAUTH_AUTHORIZE_URL,
+            "token_url": cls.OAUTH_TOKEN_URL,
+            "default_scopes": cls.OAUTH_DEFAULT_SCOPES,
+            "oauth_valid": cls.validate_oauth_credentials()
+        }

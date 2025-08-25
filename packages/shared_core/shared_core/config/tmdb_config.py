@@ -18,7 +18,7 @@ import os
 import logging
 from typing import Dict, Any, Optional
 
-from shared_core.logging.centralized_logger import CentralizedLogger
+from shared_core.utils.centralized_logging import CentralizedLogger
 
 
 class TMDBConfig:

@@ -98,6 +98,20 @@ class SpotifyConfig:
         """
         return os.getenv("SPOTIFY_REFRESH_TOKEN")
     
+    # OAuth endpoint constants
+    OAUTH_AUTHORIZE_URL = "https://accounts.spotify.com/authorize"
+    OAUTH_TOKEN_URL = "https://accounts.spotify.com/api/token"
+    OAUTH_DEFAULT_SCOPES = [
+        "user-read-private",
+        "user-read-email",
+        "user-library-read",
+        "user-top-read",
+        "user-read-recently-played",
+        "playlist-read-private",
+        "user-read-playback-state",
+        "user-read-currently-playing"
+    ]
+    
     @staticmethod
     def default_scopes() -> List[str]:
         """
@@ -106,16 +120,7 @@ class SpotifyConfig:
         Returns:
             List[str]: Default scopes for correlation analysis
         """
-        return [
-            "user-read-private",
-            "user-read-email",
-            "user-library-read",
-            "user-top-read",
-            "user-read-recently-played",
-            "playlist-read-private",
-            "user-read-playback-state",
-            "user-read-currently-playing"
-        ]
+        return SpotifyConfig.OAUTH_DEFAULT_SCOPES
     
     @staticmethod
     def get_authorization_url(scopes: Optional[List[str]] = None, state: Optional[str] = None) -> str:
@@ -166,6 +171,83 @@ class SpotifyConfig:
         except ValueError as e:
             logger.error(f"Spotify credentials validation failed: {e}")
             return False
+    
+    @staticmethod
+    def get_oauth_config() -> Dict[str, Any]:
+        """
+        Get OAuth configuration summary for validation
+        
+        Returns:
+            Dict[str, Any]: OAuth configuration with validity status
+        """
+        try:
+            client_id = SpotifyConfig.client_id()
+            client_secret = SpotifyConfig.client_secret()
+            redirect_uri = SpotifyConfig.redirect_uri()
+            
+            oauth_valid = bool(client_id and client_secret and redirect_uri)
+            
+            return {
+                "client_id": client_id[:8] + "..." if len(client_id) > 8 else "***",
+                "client_secret_set": bool(client_secret),
+                "redirect_uri": redirect_uri,
+                "oauth_valid": oauth_valid,
+                "authorize_url": SpotifyConfig.OAUTH_AUTHORIZE_URL,
+                "token_url": SpotifyConfig.OAUTH_TOKEN_URL,
+                "default_scopes": SpotifyConfig.OAUTH_DEFAULT_SCOPES
+            }
+            
+        except ValueError as e:
+            logger.error(f"OAuth configuration validation failed: {e}")
+            return {
+                "client_id": None,
+                "client_secret_set": False,
+                "redirect_uri": SpotifyConfig.redirect_uri(),
+                "oauth_valid": False,
+                "error": str(e)
+            }
+    
+    @staticmethod
+    def validate_oauth_config() -> bool:
+        """
+        Validate OAuth configuration specifically
+        
+        Returns:
+            bool: True if OAuth configuration is valid
+        """
+        oauth_config = SpotifyConfig.get_oauth_config()
+        return oauth_config.get("oauth_valid", False)
+    
+    @staticmethod
+    def get_scope_descriptions() -> Dict[str, str]:
+        """
+        Get descriptions for Spotify OAuth scopes
+        
+        Returns:
+            Dict[str, str]: Scope names mapped to descriptions
+        """
+        return {
+            "user-read-private": "Read access to user's subscription details, country, etc.",
+            "user-read-email": "Read access to user's email address",
+            "user-library-read": "Read access to user's saved tracks and albums",
+            "user-top-read": "Read access to user's top artists and tracks",
+            "user-read-recently-played": "Read access to user's recently played tracks",
+            "playlist-read-private": "Read access to user's private playlists",
+            "user-read-playback-state": "Read access to user's player state",
+            "user-read-currently-playing": "Read access to user's currently playing content",
+            "streaming": "Control playback of Spotify. This scope is currently available to Spotify iOS and Android App Remote SDKs",
+            "app-remote-control": "Remote control playback of Spotify. This scope is currently available to Spotify iOS and Android App Remote SDKs",
+            "user-modify-playback-state": "Write access to user's playback state",
+            "user-read-playback-position": "Read access to user's playback position in a content",
+            "playlist-read-collaborative": "Read access to user's collaborative playlists",
+            "playlist-modify-private": "Write access to user's private playlists",
+            "playlist-modify-public": "Write access to user's public playlists",
+            "user-follow-modify": "Write/delete access to the list of artists and other users that user follows",
+            "user-follow-read": "Read access to the list of artists and other users that user follows",
+            "user-library-modify": "Write/delete access to user's saved tracks and albums",
+            "user-top-read": "Read access to user's top artists and tracks",
+            "ugc-image-upload": "Write access to user-provided images"
+        }
     
     @staticmethod
     def get_config_summary() -> Dict[str, Any]:

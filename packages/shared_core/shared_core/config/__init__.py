@@ -8,7 +8,6 @@ from .openweathermap_config import OpenWeatherMapConfig
 from .tmdb_config import TMDBConfig
 from .musicbrainz_config import MusicBrainzConfig
 from .base_client import BaseAPIClient
-from .logging_config import get_logger
 from .unified_environment_loader import UnifiedEnvironmentLoader
 
 __all__ = [
@@ -18,6 +17,5 @@ __all__ = [
     "TMDBConfig",
     "MusicBrainzConfig",
     "BaseAPIClient",
-    "get_logger",
     "UnifiedEnvironmentLoader",
 ]

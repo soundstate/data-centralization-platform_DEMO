@@ -22,6 +22,9 @@ shared_core/api/clients/spotify/spotify_client.py
 shared_core/api/clients/tmdb/__init__.py
 shared_core/api/clients/tmdb/tmdb_client.py
 shared_core/api/graphql/__init__.py
+shared_core/auth/__init__.py
+shared_core/auth/musicbrainz_oauth.py
+shared_core/auth/spotify_oauth.py
 shared_core/config/__init__.py
 shared_core/config/base_client.py
 shared_core/config/database_config.py
