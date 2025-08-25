@@ -1,24 +1,24 @@
 {
   "workbench.colorCustomizations": {
-    "activityBar.activeBackground": "#847191",
-    "activityBar.background": "#847191",
-    "activityBar.foreground": "#e7e7e7",
-    "activityBar.inactiveForeground": "#e7e7e799",
-    "activityBarBadge.background": "#d7b787",
-    "activityBarBadge.foreground": "#15202b",
-    "commandCenter.border": "#e7e7e799",
-    "sash.hoverBorder": "#847191",
-    "statusBar.background": "#6a5a75",
-    "statusBar.foreground": "#e7e7e7",
-    "statusBarItem.hoverBackground": "#847191",
-    "statusBarItem.remoteBackground": "#6a5a75",
-    "statusBarItem.remoteForeground": "#e7e7e7",
-    "titleBar.activeBackground": "#6a5a75",
-    "titleBar.activeForeground": "#e7e7e7",
-    "titleBar.inactiveBackground": "#6a5a7599",
-    "titleBar.inactiveForeground": "#e7e7e799"
+    "activityBar.activeBackground": "#c58e7e",
+    "activityBar.background": "#c58e7e",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#316e3f",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "commandCenter.border": "#15202b99",
+    "sash.hoverBorder": "#c58e7e",
+    "statusBar.background": "#b56f5b",
+    "statusBar.foreground": "#15202b",
+    "statusBarItem.hoverBackground": "#985745",
+    "statusBarItem.remoteBackground": "#b56f5b",
+    "statusBarItem.remoteForeground": "#15202b",
+    "titleBar.activeBackground": "#b56f5b",
+    "titleBar.activeForeground": "#15202b",
+    "titleBar.inactiveBackground": "#b56f5b99",
+    "titleBar.inactiveForeground": "#15202b99"
   },
-  "peacock.color": "#6A5A75",
+  "peacock.color": "#B56F5B",
 
   // File icon theme settings
   "workbench.iconTheme": "material-icon-theme",
@@ -113,14 +113,16 @@
     "editor.insertSpaces": true,
     "editor.renderWhitespace": "none"
   },
-  
+
   // Black formatter settings
   "black-formatter.args": ["--line-length=88"],
-  
+
   // Flake8 settings - ignore whitespace errors completely
-  "flake8.args": ["--ignore=W293,W291,W292,W391,E701,E702,E703,E711,E712,E713,E714,E721,E722,E731,E741,E742,E743,W503,W504"],
+  "flake8.args": [
+    "--ignore=W293,W291,W292,W391,E701,E702,E703,E711,E712,E713,E714,E721,E722,E731,E741,E742,E743,W503,W504"
+  ],
   "flake8.enabled": true,
-  
+
   // Import sorting settings
   "isort.args": ["--profile", "black"]
 }
